@@ -1,7 +1,7 @@
 import React from "react";
 
 const Display = () => {
-  return <div>Display</div>;
+  return <></>
 };
 
 export default Display;
