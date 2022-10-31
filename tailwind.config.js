@@ -10,10 +10,12 @@ module.exports = {
       },
       colors: {
         'orange': '#FFa900',
-        'white': '#F8F8F8',
+        'gray': '#F8F8F8',
         'black': '#3F4345'
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
