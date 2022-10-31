@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import NavBarMain from "../components/navBarMain/NavBarMain";
 
-test('open dropdown "Mon compte"', () => {
+test("open dropdown 'Mon compte'", () => {
   render(<NavBarMain />);
   const myAccount = screen.getByRole("button", { name: "Mon compte" });
   expect(myAccount).toBeInTheDocument();
