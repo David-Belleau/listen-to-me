@@ -46,7 +46,7 @@ const currentUser = "user";
 
 const NavBarMain = () => {
   return (
-    <Popover className="relative">
+    <Popover className="relative z-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex items-center justify-between md:justify-center py-4 md:space-x-10">
           <div className="flex justify-start ">
@@ -101,7 +101,7 @@ const NavBarMain = () => {
           focus
           className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition md:hidden"
         >
-          <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-opacity-5">
+          <div className="divide-y-2 divide-white rounded-lg bg-gray shadow-lg ring-opacity-5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
@@ -112,7 +112,7 @@ const NavBarMain = () => {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
+                  <Popover.Button className="inline-flex items-center justify-center rounded-md bg-gray p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon
                       className="h-6 w-6 text-orange"
@@ -160,7 +160,7 @@ const NavBarMain = () => {
               <div>
                 <a
                   href="/register"
-                  className="flex w-full sm:w-6/12 m-auto items-center justify-center rounded-md border border-transparent bg-orange px-4 py-2 text-base font-medium text-white shadow-sm"
+                  className="flex w-full sm:w-6/12 m-auto items-center justify-center rounded-md border border-transparent bg-orange px-4 py-2 text-base font-medium text-gray shadow-sm"
                 >
                   S'inscrire
                 </a>
