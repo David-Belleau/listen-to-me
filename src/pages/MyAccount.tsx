@@ -1,9 +1,7 @@
-import React from 'react'
+import Authentification from "../components/navBarMain/Authentification/Authentification";
 
 const MyAccount = () => {
-  return (
-    <div>MyAccount</div>
-  )
-}
+  return <Authentification />;
+};
 
-export default MyAccount
+export default MyAccount;

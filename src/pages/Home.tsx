@@ -1,9 +1,15 @@
-import React from 'react'
+import Display from "../components/display/Display";
+import Products from "../components/products/Products";
+import Contact from "../components/contact/Contact";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Display />
+      <Products />
+      <Contact />
+    </>
+  );
+};
 
-export default Home
+export default Home;

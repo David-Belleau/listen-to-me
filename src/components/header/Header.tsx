@@ -1,7 +1,13 @@
-import React from "react";
+import NavBarGenres from "../navBarGenres/NavBarGenres";
+import NavBarMain from "../navBarMain/NavBarMain";
 
 const Header = () => {
-  return <div>Header</div>;
+  return (
+    <>
+      <NavBarMain />
+      <NavBarGenres />
+    </>
+  );
 };
 
 export default Header;
