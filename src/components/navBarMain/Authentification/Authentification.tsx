@@ -32,7 +32,7 @@ const Authentification = () => {
             >
               <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                 <div className="overflow-hidden rounded-lg shadow-lg">
-                  <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                  <div className="relative grid gap-6 bg-gray px-5 py-6 sm:gap-8 sm:p-8">
                     <a
                       href="/myaccount"
                       className="-m-3 flex items-start rounded-lg p-3 hover:bg-gray-50"
