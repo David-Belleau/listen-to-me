@@ -4,13 +4,13 @@ const SearchBar = () => {
       <div className="input-group relative flex items-stretch w-11/12 sm:w-6/12 md:w-full ml-5 mb-4 sm:m-auto">
         <input
           type="search"
-          className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:outline-none"
+          className="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-gray bg-clip-padding border-solid border-black transition ease-in-out focus:border-black"
           placeholder="Recherche..."
           aria-label="Search"
           aria-describedby="button-addon2"
         />
         <button
-          className="btn px-6 py-2.5 bg-orange text-white font-medium text-xs leading-tight uppercase  shadow-md hover:shadow-lg focus:bg-orange-700 focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out flex items-center"
+          className="btn px-6 py-2.5 bg-orange text-gray font-medium text-xs leading-tight uppercase  shadow-md hover:shadow-lg focus:bg-orange-700 focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out flex items-center"
           type="button"
           id="button-addon2"
         >
