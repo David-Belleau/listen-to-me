@@ -4,7 +4,7 @@ import { ProductProps } from "../../utils/types";
 const CallToActionButton = (props: ProductProps) => {
   return (
     <div className="flex justify-center gap-x-3 md:gap-x-6 mt-1 md:mt-2 sm:mb-4">
-      <a href="/cart" className="">
+      <a href="/cart">
         <ShoppingCartIcon className="w-6 sm:w-9 sm:hidden" />
         <p className="hidden sm:block text-center text-xs rounded border-2 p-1 border-black bg-gray">
           Ajouter au panier
