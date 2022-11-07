@@ -123,7 +123,7 @@ const NavBarMain = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {currentUser ? (
+                  {currentUser && (
                     <a
                       href="/myaccount"
                       className="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
@@ -136,7 +136,7 @@ const NavBarMain = () => {
                         Mon compte
                       </span>
                     </a>
-                  ) : null}
+                  )}
                   {links.map((item) => (
                     <a
                       key={item.name}
@@ -155,7 +155,7 @@ const NavBarMain = () => {
                 </nav>
               </div>
             </div>
-            <SearchBar/>
+            <SearchBar />
             <div className="space-y-6 py-6 px-5">
               <div>
                 <a
