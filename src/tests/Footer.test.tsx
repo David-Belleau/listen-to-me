@@ -12,4 +12,5 @@ test("check elements presence",()=>{
     expect(screen.getByRole('img', {name:'logo de Youtube'})).toBeInTheDocument()
     expect(screen.getByRole('img', {name:'logo de Twitter'})).toBeInTheDocument()
     expect(screen.getByRole('img', {name:'logo de Instagram'})).toBeInTheDocument()
+    expect(screen.getByText('© 2022 Listen to me')).toBeInTheDocument()
 })
