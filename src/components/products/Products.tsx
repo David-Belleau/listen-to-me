@@ -3,19 +3,36 @@ import SliderTemplate from "./SliderTemplate";
 import { Navigation, Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import Separator from "./Separator";
+import {spotifyApi} from '../../apis/spotifyConfig'
+import { GetMusicData, GetToken } from "../../utils/spotifyApi";
+import { useEffect, useState } from "react";
 
 const Products = () => {
+  /* const [items, setItems] = useState<[]>([])
+  useEffect(()=>{
+   setItems(GetMusicData());
+  },[]) */
+  console.log('gettoken',GetToken())
+  console.log('getmusicdata', GetMusicData());
   return (
     <>
       <Separator children="Artistes populaires" />
-      <SliderTemplate
+     {/*  <SliderTemplate
         classDiv="my-4 mx-6 md:mx-10"
         slides={3}
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
         children={
-          <>
+          GetMusicData().map((artist: string)=>(            
             <SwiperSlide className="bg-gray">
+              <img
+                src={artist}
+                alt="logo de Facebook"
+                className="w-48 mx-auto"
+              />
+            </SwiperSlide>
+  ))} */}
+            {/* <SwiperSlide className="bg-gray">
               <img
                 src="./images/logo-facebook.svg"
                 alt="logo de Facebook"
@@ -42,10 +59,10 @@ const Products = () => {
                 alt="logo de Instagram"
                 className="w-48 mx-auto"
               />
-            </SwiperSlide>
-          </>
-        }
-      />
+            </SwiperSlide> */}
+          
+       {/*  }
+      /> */}
       <Separator children="Sons du moment" />
       <SliderTemplate
         classDiv="my-4 mx-6 md:mx-10"
