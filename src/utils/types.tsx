@@ -14,4 +14,14 @@ type ProductProps = {
   children?: string;
 };
 
-export type { SliderProps, ProductProps };
+type TokenResponseProps = {
+  status: number;
+  statusText: string;
+};
+
+type MusicDataProps = {
+  items: object[];
+  // limit
+};
+
+export type { SliderProps, ProductProps, TokenResponseProps, MusicDataProps };
