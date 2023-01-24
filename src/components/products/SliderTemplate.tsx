@@ -3,19 +3,26 @@ import { SliderProps } from "../../utils/types";
 import "swiper/css/pagination";
 import "swiper/css";
 
-const SliderTemplate = (props: SliderProps) => {
+const SliderTemplate = ({
+  classDiv,
+  slides,
+  pagination,
+  modules,
+  classSwiper,
+  children,
+}: SliderProps) => {
   return (
-    <div className={props.classDiv}>
+    <div className={classDiv}>
       <Swiper
-        slidesPerView={props.slides}
-        pagination={props.pagination}
-        modules={props.modules}
-        className={props.classSwiper}
+        slidesPerView={slides}
+        pagination={pagination}
+        modules={modules}
+        className={classSwiper}
         navigation={true}
         loop={true}
         spaceBetween={30}
       >
-        {props.children}
+        {children}
       </Swiper>
     </div>
   );
