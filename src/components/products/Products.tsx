@@ -12,8 +12,7 @@ const Products = () => {
   useEffect(()=>{
    setItems(GetMusicData());
   },[]) */
-  console.log('gettoken',GetToken())
-  console.log('getmusicdata', GetMusicData());
+ 
   return (
     <>
       <Separator children="Artistes populaires" />
