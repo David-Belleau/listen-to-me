@@ -4,7 +4,7 @@ const Unauth = () => {
   return (
     <div
       style={{ backgroundImage: `url('images/bg_site.jpg')` }}
-      className="bg-cover bg-no-repeat h-screen"
+      className="bg-cover bg-center bg-no-repeat h-screen"
     >
       <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 flex flex-col items-center gap-10">
         <img src="./images/logo_site.svg" alt="Logo du site" className="w-40" />
