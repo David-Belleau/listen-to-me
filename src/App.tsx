@@ -1,11 +1,15 @@
 import "./App.css";
-import Auth from "./Auth";
-import Unauth from "./Unauth";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Error404 from "./pages/Error404";
 
 const App = () => {
   return (
     <>
-    {'no user' ? <Unauth/> : <Auth/>}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
     </>
   );
 };
