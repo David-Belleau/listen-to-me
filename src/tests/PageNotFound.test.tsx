@@ -15,7 +15,7 @@ test("check elements presence", () => {
   expect(
     screen.getByRole("heading", { name: "Erreur 404" })
   ).toBeInTheDocument();
-  expect(screen.getByText("Aucune musique par ici !")).toBeInTheDocument();
+  expect(screen.getByText("La page que vous recherchez n'existe pas !")).toBeInTheDocument();
   expect(
     screen.getByRole("link", { name: "Revenir à la page d'accueil" })
   ).toBeInTheDocument();
