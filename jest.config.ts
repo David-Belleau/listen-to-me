@@ -64,7 +64,11 @@ const config: Config.InitialOptions = {
   // globalTeardown: undefined,
 
   // A set of global variables that need to be available in all test environments
-  // globals: {},
+  globals: {
+    "ts-jest": {
+      tsconfig: "./tsconfig.json",
+    },
+  },
 
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
@@ -75,16 +79,7 @@ const config: Config.InitialOptions = {
   ], */
 
   // An array of file extensions your modules use
- /*  moduleFileExtensions: [
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
-  ], */
+  moduleFileExtensions: ["ts", "tsx", "js"],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   /* moduleNameMapper: {
@@ -100,7 +95,7 @@ const config: Config.InitialOptions = {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: "ts-jest",
+  preset: "ts-jest",
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -144,7 +139,7 @@ const config: Config.InitialOptions = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -159,7 +154,7 @@ const config: Config.InitialOptions = {
   // testPathIgnorePatterns: ["<rootDir>/node_modules/"],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  // testRegex: [],
+  testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,
@@ -173,7 +168,10 @@ const config: Config.InitialOptions = {
   }, */
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ["/node_modules/(?!swiper)"],
+  transformIgnorePatterns: [
+    "/node_modules/(?!swiper)",
+    "/node_modules/(?!axios)",
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
