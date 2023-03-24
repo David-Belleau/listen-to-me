@@ -10,7 +10,7 @@ const PageNotFound = () => {
           className="w-24 m-auto"
         />
         <h1 className="text-6xl">Erreur 404</h1>
-        <p className="text-xl">Aucune musique par ici !</p>
+        <p className="text-xl">La page que vous recherchez n'existe pas !</p>
         <Link
           to="/"
           className="rounded-lg m-auto bg-black text-white px-4 py-2 font-semibold cursor-pointer transition-all duration-400 ease-in-out hover:bg-orange focus:bg-neutral-200 focus:text-black"
