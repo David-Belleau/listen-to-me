@@ -5,7 +5,7 @@
 
 import type { Config } from "@jest/types";
 
-const config: Config.InitialOptions = {
+export const config: Config.InitialOptions = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -186,4 +186,3 @@ const config: Config.InitialOptions = {
   // watchman: true,
 };
 
-export default config;
