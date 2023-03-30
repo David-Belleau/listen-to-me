@@ -1,7 +1,6 @@
-import Authentification from "../components/navBarMain/Authentification/Authentification";
+import {Authentification} from "../components/navBarMain/Authentification/Authentification";
 
-const MyAccount = () => {
+export const MyAccount = () => {
   return <Authentification />;
 };
 
-export default MyAccount;

@@ -1,6 +1,6 @@
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
-const Cart = () => {
+export const Cart = () => {
   return (
     <a href="/cart" className="grid">
       <ShoppingCartIcon className="w-6 justify-self-center"/>
@@ -9,4 +9,3 @@ const Cart = () => {
   );
 };
 
-export default Cart;

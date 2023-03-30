@@ -2,7 +2,7 @@ import { Pagination, Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import SliderTemplate from "../products/SliderTemplate";
 
-const Display = () => {
+export const Display = () => {
   return (
     <SliderTemplate
       classDiv="my-4"
@@ -38,5 +38,3 @@ const Display = () => {
     />
   );
 };
-
-export default Display;

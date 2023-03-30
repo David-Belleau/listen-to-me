@@ -1,7 +1,6 @@
 import React from "react";
 
-const FilterBar = () => {
+export const FilterBar = () => {
   return <div>FilterBar</div>;
 };
 
-export default FilterBar;

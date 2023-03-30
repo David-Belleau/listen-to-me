@@ -1,5 +1,5 @@
 import { Swiper } from "swiper/react";
-import { SliderProps } from "../../utils/types";
+import { SliderProps } from "../../utils/types/components";
 import "swiper/css/pagination";
 import "swiper/css";
 
@@ -28,4 +28,4 @@ const SliderTemplate = ({
   );
 };
 
-export default SliderTemplate;
+export default SliderTemplate

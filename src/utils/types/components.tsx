@@ -1,6 +1,6 @@
 import { SwiperModule } from "swiper/types";
 
-type SliderProps = {
+export type SliderProps = {
   classDiv: string;
   classSwiper?: string;
   slides: number;
@@ -9,19 +9,17 @@ type SliderProps = {
   pagination?: { clickable: boolean };
 };
 
-type ProductProps = {
+export type ProductProps = {
   url?: string;
   children?: string;
 };
 
-type TokenResponseProps = {
+export type TokenResponseProps = {
   status: number;
   statusText: string;
 };
 
-type MusicDataProps = {
+export type MusicDataProps = {
   items: object[];
   // limit
 };
-
-export type { SliderProps, ProductProps, TokenResponseProps, MusicDataProps };

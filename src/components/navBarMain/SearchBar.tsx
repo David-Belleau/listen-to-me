@@ -1,4 +1,4 @@
-const SearchBar = () => {
+export const SearchBar = () => {
   return (
     <div className="pt-4">
       <div className="input-group relative flex items-stretch w-11/12 sm:w-6/12 md:w-full ml-5 mb-4 sm:m-auto">
@@ -35,4 +35,3 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;

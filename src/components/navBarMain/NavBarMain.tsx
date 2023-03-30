@@ -1,5 +1,5 @@
-import SearchBar from "./SearchBar";
-import Cart from "./Cart";
+import {SearchBar} from "./SearchBar";
+import {Cart} from "./Cart";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -11,7 +11,7 @@ import {
   UserIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import Authentification from "./Authentification/Authentification";
+import {Authentification} from "./Authentification/Authentification";
 import { UserMinusIcon } from "@heroicons/react/24/outline";
 
 const links = [
@@ -44,7 +44,7 @@ const links = [
 
 const currentUser = "user";
 
-const NavBarMain = () => {
+export const NavBarMain = () => {
   return (
     <Popover className="relative z-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -133,7 +133,7 @@ const NavBarMain = () => {
                         aria-hidden="true"
                       />
                       <span className="ml-3 text-base font-medium text-gray-900">
-                        Mon compte
+                        Mes informations
                       </span>
                     </a>
                   )}
@@ -156,8 +156,8 @@ const NavBarMain = () => {
               </div>
             </div>
             <SearchBar />
-            <div className="space-y-6 py-6 px-5">
-              <div>
+            <div className="space-y-6 py-6 px-5"/>
+              {/* <div>
                 <a
                   href="/register"
                   className="flex w-full sm:w-6/12 m-auto items-center justify-center rounded-md border border-transparent bg-orange px-4 py-2 text-base font-medium text-gray shadow-sm"
@@ -171,7 +171,7 @@ const NavBarMain = () => {
                   </a>
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </Popover.Panel>
       </Transition>
@@ -180,4 +180,3 @@ const NavBarMain = () => {
   );
 };
 
-export default NavBarMain;

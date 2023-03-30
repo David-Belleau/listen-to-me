@@ -6,7 +6,7 @@ import {
   UserMinusIcon,
 } from "@heroicons/react/24/outline";
 
-const Authentification = () => {
+export const Authentification = () => {
   const currentUser = "user";
   return (
     <>
@@ -66,4 +66,3 @@ const Authentification = () => {
   );
 };
 
-export default Authentification;

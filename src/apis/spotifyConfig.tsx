@@ -1,15 +1,14 @@
-import SpotifyWebApi from "spotify-web-api-node";
+// import SpotifyWebApi from "spotify-web-api-node";
 
-const client_id = process.env.REACT_APP_CLIENT_ID;
-const client_secret = process.env.REACT_APP_CLIENT_SECRET;
-const uri = process.env.REACT_APP_URI;
-const redirect_uri = process.env.REACT_APP_REDIRECT_URI;
-const api_token = process.env.REACT_APP_API_TOKEN;
+export const client_id = process.env.REACT_APP_CLIENT_ID;
+export const client_secret = process.env.REACT_APP_CLIENT_SECRET;
+export const uri = process.env.REACT_APP_URI;
+export const redirect_uri = process.env.REACT_APP_REDIRECT_URI;
+export const api_token = process.env.REACT_APP_API_TOKEN;
 
-const spotifyApi = new SpotifyWebApi({
+/* const spotifyApi = new SpotifyWebApi({
   clientId: client_id,
   clientSecret: client_secret,
   redirectUri: redirect_uri,
-});
+}); */
 
-export { client_id, client_secret, uri, redirect_uri, api_token, spotifyApi };

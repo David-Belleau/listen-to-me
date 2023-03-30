@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const PageNotFound = () => {
+export const PageNotFound = () => {
   return (
     <div className="bg-cover bg-center bg-no-repeat bg-gray h-screen">
       <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 flex flex-col gap-10 text-center font-bold">
@@ -22,4 +22,3 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
