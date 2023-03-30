@@ -1,10 +1,10 @@
-import Header from "../components/header/Header";
-import Display from "../components/display/Display";
-import Products from "../components/products/Products";
-import Contact from "../components/contact/Contact";
-import Footer from "../components/footer/Footer";
+import {Header} from "../components/header/Header";
+import {Display} from "../components/display/Display";
+import {Products} from "../components/products/Products";
+import {Contact} from "../components/contact/Contact";
+import {Footer} from "../components/footer/Footer";
 
-const Home = () => {
+export const Home = () => {
   return (
     <>
       {"no user" ? (
@@ -36,4 +36,3 @@ const Home = () => {
   );
 };
 
-export default Home;

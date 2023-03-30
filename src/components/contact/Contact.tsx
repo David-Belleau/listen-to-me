@@ -1,7 +1,7 @@
-import Separator from "../products/Separator";
-import Form from "./Form";
+import {Separator} from "../products/Separator";
+import {Form} from "./Form";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <>
       <Separator children="Contactez-nous" />
@@ -19,4 +19,3 @@ const Contact = () => {
   );
 };
 
-export default Contact;

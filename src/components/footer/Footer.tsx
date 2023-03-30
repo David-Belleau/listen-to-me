@@ -27,7 +27,7 @@ const imgsSlider = [
   },
 ];
 
-const Footer = () => {
+export const Footer = () => {
   const currentYear = new Date().getFullYear()
   return (
     <footer className="bg-gray">
@@ -65,4 +65,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;

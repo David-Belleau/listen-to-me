@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { FallbackProps } from "react-error-boundary";
 
-const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
+export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -34,5 +34,3 @@ const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
     </>
   );
 };
-
-export default ErrorFallback;

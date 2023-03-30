@@ -1,5 +1,5 @@
 import { EyeIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
-import { ProductProps } from "../../utils/types";
+import { ProductProps } from "../../utils/types/components";
 
 const CallToActionButton = ({url}: ProductProps) => {
   return (

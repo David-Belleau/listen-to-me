@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBarGenres = () => {
+export const NavBarGenres = () => {
   return (
     <div className="bg-gray">
       <div className="grid grid-cols-4 sm:flex justify-center sm:gap-8 text-center py-3">
@@ -17,4 +17,3 @@ const NavBarGenres = () => {
   );
 };
 
-export default NavBarGenres;

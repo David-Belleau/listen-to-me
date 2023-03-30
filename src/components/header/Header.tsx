@@ -1,7 +1,7 @@
-import NavBarGenres from "../navBarGenres/NavBarGenres";
-import NavBarMain from "../navBarMain/NavBarMain";
+import {NavBarGenres} from "../navBarGenres/NavBarGenres";
+import {NavBarMain} from "../navBarMain/NavBarMain";
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
       <NavBarMain />
@@ -10,4 +10,3 @@ const Header = () => {
   );
 };
 
-export default Header;
