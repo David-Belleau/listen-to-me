@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import PageNotFound from "../components/error/PageNotFound";
+import {PageNotFound} from "../components/error/PageNotFound";
 
 test("check elements presence", () => {
   render(

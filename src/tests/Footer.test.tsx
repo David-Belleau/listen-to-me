@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import Footer from '../components/footer/Footer'
+import {Footer} from '../components/footer/Footer'
 
 test("check elements presence",()=>{
     render(<Footer/>)

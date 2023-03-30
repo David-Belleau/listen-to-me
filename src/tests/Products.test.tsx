@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Products from "../components/products/Products";
+import { Products } from "../components/products/Products";
 
 jest.mock("../components/products/SliderTemplate.tsx", () => {
   return jest.fn();
@@ -14,7 +14,7 @@ jest.mock("swiper/react", () => ({
 
 describe("check elements presence", () => {
   test("check titles presence", () => {
-    render(<Products />);
+    render(<Products/>);
     expect(
       screen.getByRole("heading", { name: "Artistes populaires" })
     ).toBeInTheDocument();

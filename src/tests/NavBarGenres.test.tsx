@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import NavBarGenres from "../components/navBarGenres/NavBarGenres";
+import {NavBarGenres} from "../components/navBarGenres/NavBarGenres";
 
 test("chek buttons presence",()=>{
     render(<NavBarGenres/>)

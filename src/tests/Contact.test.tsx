@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Contact from "../components/contact/Contact";
+import {Contact} from "../components/contact/Contact";
 
 test("check elements presence", () => {
   render(<Contact />);
