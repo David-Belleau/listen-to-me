@@ -5,7 +5,7 @@ export const handler = async () => {
         const response = await axios?.get('https://api.deezer.com/chart/0/tracks');
         return {
             statusCode: 200,
-            body: JSON.stringify(response.data)
+            body: JSON.stringify(response?.data)
         };
     } catch (error) {
         return {
