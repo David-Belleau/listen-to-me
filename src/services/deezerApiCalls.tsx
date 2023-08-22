@@ -1,24 +1,25 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { host } from "./deezerConfig";
 
 export const getMusicData = createApi({
   reducerPath: "getMusicData",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/",
+    baseUrl: `${host}`,
   }),
   endpoints: (builder) => ({
     getChartArtists: builder.query({
       query: () => ({
-        url: "chart/artists",
+        url: "chart-artists",
       }),
     }),
     getChartTracks: builder.query({
       query: () => ({
-        url: "chart/tracks",
+        url: "chart-tracks",
       }),
     }),
     getChartAlbums: builder.query({
       query: () => ({
-        url: "chart/albums",
+        url: "chart-albums",
       }),
     }),
   }),
