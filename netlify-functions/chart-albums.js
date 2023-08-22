@@ -2,7 +2,7 @@ import { axios } from "axios";
 
 export const handler = async () => {
     try {
-        const response = await axios.get('https://api.deezer.com/chart/0/albums');
+        const response = await axios?.get('https://api.deezer.com/chart/0/albums');
         return {
             statusCode: 200,
             body: JSON.stringify(response.data)

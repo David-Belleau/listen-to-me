@@ -1,8 +1,8 @@
-import { axios } from "axios";
+import { axios} from "axios";
 
 export const handler = async () => {
     try {
-        const response = await axios.get('https://api.deezer.com/chart/0/tracks');
+        const response = await axios?.get('https://api.deezer.com/chart/0/tracks');
         return {
             statusCode: 200,
             body: JSON.stringify(response.data)
