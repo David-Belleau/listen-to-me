@@ -1,6 +1,6 @@
 import { axios } from "axios";
 
-export const ChartAlbums = async () => {
+export const handler = async () => {
     try {
         const response = await axios.get('https://api.deezer.com/chart/0/albums');
         return {
