@@ -28,3 +28,8 @@ export type GetTokenApiData = {
   expires_in: number;
   refresh_token: string;
 };
+
+// Access-Control-Allow-Origin
+export type EventProps= {
+  headers: { [header: string]: string }
+}
