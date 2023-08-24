@@ -1,4 +1,5 @@
 import { axios } from "axios";
+import allowedOrigin from "../src/utils/headersApiCalls";
 
 export const handler = async () => {
     try {
@@ -7,7 +8,7 @@ export const handler = async () => {
             statusCode: 200,
             body: JSON.stringify(response?.data),
             headers: {
-                "Access-Control-Allow-Origin": "https://listen-to-me.netlify.app",
+                "Access-Control-Allow-Origin": allowedOrigin(),
                 "Access-Control-Allow-Headers": "Content-Type"
             }
         };
@@ -16,7 +17,7 @@ export const handler = async () => {
             statusCode: 500,
             body: JSON.stringify({ error: error.message }),
             headers: {
-                "Access-Control-Allow-Origin": "https://listen-to-me.netlify.app",
+                "Access-Control-Allow-Origin": allowedOrigin(),
                 "Access-Control-Allow-Headers": "Content-Type"
             }
         };
