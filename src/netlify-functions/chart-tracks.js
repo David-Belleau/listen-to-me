@@ -1,4 +1,4 @@
-import axios from "axios";
+import {axios} from "axios";
 import allowedOrigin from "../utils/headersApiCalls.tsx";
 
 export const handler = async () => {
