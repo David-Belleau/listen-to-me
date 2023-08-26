@@ -1,4 +1,4 @@
-import { EventProps } from "./types/apiData";
+import { EventProps } from "../utils/types/apiData";
 
 export const allowedOrigin = () => {
     const origin = (e?:EventProps) => e!.headers.Origin || e!.headers.Origin;
