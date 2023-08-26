@@ -1,5 +1,5 @@
 const axios = require("axios");
-const allowedOrigin = require("../utils/headersApiCalls.tsx");
+const allowedOrigin = require("./headersApiCalls.js");
 
 export const handler = async () => {
     try {
