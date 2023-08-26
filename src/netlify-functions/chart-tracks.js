@@ -1,14 +1,14 @@
 import {handler as allowedOrigin} from "./allowedOrigin.js"
 import axios from "axios"
 
-export const handler = async () => {
+export const handler = async (event) => {
     try {
         const response = await axios.get('https://api.deezer.com/chart/0/tracks');
         return {
             statusCode: 200,
             body: JSON.stringify(response.data),
             headers: {
-                "Access-Control-Allow-Origin": allowedOrigin(),
+                "Access-Control-Allow-Origin": allowedOrigin(event),
                 "Access-Control-Allow-Headers": "Content-Type"
             }
         };
@@ -17,7 +17,7 @@ export const handler = async () => {
             statusCode: 500,
             body: JSON.stringify({ error: error.message }),
             headers: {
-                "Access-Control-Allow-Origin": allowedOrigin(),
+                "Access-Control-Allow-Origin": allowedOrigin(event),
                 "Access-Control-Allow-Headers": "Content-Type"
             }
         };

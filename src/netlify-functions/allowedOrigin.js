@@ -1,8 +1,8 @@
-export const handler = () => {
-    const origin = e => e.headers.Origin || e.headers.Origin
+export const handler = (event) => {
+    const origin = event => event.headers.Origin || event.headers.Origin
     let allowedOrigin;
 
-    switch (origin()) {
+    switch (origin(event)) {
         case 'http://localhost:3000':
             allowedOrigin = 'http://localhost:3000';
             break;
