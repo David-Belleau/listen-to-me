@@ -1,5 +1,5 @@
-const axios = require("axios");
-const allowedOrigin = require("./headersApiCalls.js");
+import {handler as allowedOrigin} from "./allowedOrigin.js"
+import axios from "axios"
 
 export const handler = async () => {
     try {
