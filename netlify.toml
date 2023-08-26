@@ -4,3 +4,4 @@ command = "npm run build"
 
 [functions]
   directory = "/src/netlify-functions"
+  node_bundler = "esbuild"
