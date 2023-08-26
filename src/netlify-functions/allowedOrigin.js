@@ -1,4 +1,4 @@
-export const allowedOrigin = () => {
+export const handler = () => {
     const origin = e => e.headers.Origin || e.headers.Origin
     let allowedOrigin;
 
