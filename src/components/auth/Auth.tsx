@@ -5,16 +5,20 @@ import { Footer } from "../footer/Footer";
 import { app_id, redirect_uri, uri } from "../../services/deezerConfig";
 
 export const Auth = () => {
-  let authCode: string = "";
-
   const handleClick = () => {
     window.location.href = `${uri}auth.php?app_id=${app_id}&redirect_uri=${redirect_uri}&response_type=token&perms=basic_access,email`;
   };
-  authCode = window.location.hash.substring(1).split("&")[0].split("=")[1];
+
+  localStorage.setItem(
+    "currentAuthCode",
+    window.location.hash.substring(1).split("&")[0].split("=")[1]
+  );
+
+  let currentAuthCode = localStorage.getItem("currentAuthCode");
 
   return (
     <>
-      {authCode?.length !== 0 ? (
+      {currentAuthCode?.length !== 0 ? (
         <>
           <Header />
           <Products />
@@ -44,4 +48,3 @@ export const Auth = () => {
     </>
   );
 };
-
