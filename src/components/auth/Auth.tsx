@@ -9,10 +9,11 @@ export const Auth = () => {
     window.location.href = `${uri}auth.php?app_id=${app_id}&redirect_uri=${redirect_uri}&response_type=token&perms=basic_access,email`;
   };
 
-  localStorage.setItem(
-    "currentAuthCode",
-    window.location.hash.substring(1).split("&")[0].split("=")[1]
-  );
+  let authCode = window.location.hash.substring(1).split("&")[0].split("=")[1];
+
+  if (authCode && authCode !== "undefined") {
+    localStorage.setItem("currentAuthCode", authCode);
+  }
 
   let currentAuthCode = localStorage.getItem("currentAuthCode");
 
