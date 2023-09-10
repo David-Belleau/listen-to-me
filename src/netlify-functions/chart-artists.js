@@ -17,7 +17,7 @@ export const handler = async (event) => {
             statusCode: 500,
             body: JSON.stringify({ error: error.message }),
             headers: {
-                "Access-Control-Allow-Origin": '*',
+                "Access-Control-Allow-Origin": allowedOrigin(event),
                 "Access-Control-Allow-Headers": "Content-Type"
             }
         };
