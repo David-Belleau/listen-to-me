@@ -1,4 +1,5 @@
-import {handler as allowedOrigin} from "./allowedOrigin.js"
+import { handler as allowedOrigin } from "./allowedOrigin.js"
+
 import axios from "axios"
 
 export const handler = async (event) => {
@@ -9,7 +10,7 @@ export const handler = async (event) => {
             body: JSON.stringify(response.data),
             headers: {
                 "Access-Control-Allow-Origin": allowedOrigin(event),
-                "Access-Control-Allow-Headers": "Content-Type"
+                "Access-Control-Allow-Headers": "Content-Type",
             }
         };
     } catch (error) {
@@ -18,7 +19,7 @@ export const handler = async (event) => {
             body: JSON.stringify({ error: error.message }),
             headers: {
                 "Access-Control-Allow-Origin": allowedOrigin(event),
-                "Access-Control-Allow-Headers": "Content-Type"
+                "Access-Control-Allow-Headers": "Content-Type",
             }
         };
     }

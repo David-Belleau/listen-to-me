@@ -9,7 +9,7 @@ export const handler = async (event) => {
             body: JSON.stringify(response.data),
             headers: {
                 "Access-Control-Allow-Origin": allowedOrigin(event),
-                "Access-Control-Allow-Headers": "Content-Type"
+                "Access-Control-Allow-Headers": "Content-Type",
             }
         };
     } catch (error) {
