@@ -3,6 +3,10 @@ import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "./components/error/ErrorFallback";
 import { Home } from "./pages/Home";
 import { Error404 } from "./pages/Error404";
+import { PrivateRoutes } from "./components/auth/PrivateRoutes";
+import { MyAccount } from "./pages/MyAccount";
+import { ProductDetails } from "./pages/ProductDetails";
+import { ArtistId } from "./pages/ArtistId";
 
 export const App = () => {
   return (
@@ -11,6 +15,11 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/myaccount" element={<MyAccount />} />
+            <Route path="/productdetails" element={<ProductDetails />} />
+            <Route path="/artist/:artistId" element={<ArtistId />} />
+          </Route>
         </Routes>
       </ErrorBoundary>
     </>

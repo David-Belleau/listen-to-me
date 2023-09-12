@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FallbackProps } from "react-error-boundary";
+import error404 from '../../assets/images/error_404.png';
 
 export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: FallbackProps) => {
           className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 flex flex-col gap-10 text-center font-bold"
         >
           <img
-            src="./images/error_404.png"
+            src={error404}
             alt="Icon de prudence"
             className="w-24 m-auto"
           />

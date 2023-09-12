@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import error404 from '../../assets/images/error_404.png'
 
 export const PageNotFound = () => {
   return (
     <div className="bg-cover bg-center bg-no-repeat bg-gray h-screen">
       <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 flex flex-col gap-10 text-center font-bold">
         <img
-          src="./images/error_404.png"
+          src={error404}
           alt="Icon de prudence"
           className="w-24 m-auto"
         />

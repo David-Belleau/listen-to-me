@@ -13,6 +13,7 @@ import {
 } from "@heroicons/react/24/outline";
 import {Authentification} from "./Authentification/Authentification";
 import { UserMinusIcon } from "@heroicons/react/24/outline";
+import logoSite from '../../assets/images/logo_site.svg';
 
 const links = [
   {
@@ -53,7 +54,7 @@ export const NavBarMain = () => {
             <a href="/">
               <img
                 className="w-24"
-                src="./images/logo_site.svg"
+                src={logoSite}
                 alt="logo du site"
               />
             </a>
