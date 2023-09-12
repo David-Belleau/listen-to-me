@@ -8,18 +8,19 @@ import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
 
 export const ArtistData = () => {
-  let artistId = useParams();
-  const { data: album, isLoading } = useGetArtistsDataQuery(artistId);
+  let {artistId} = useParams();
+  const { data: albums, isLoading } = useGetArtistsDataQuery('artist data');
+
   return (
     <>
       <Header />
-      {!album || isLoading === true ? (
+      {/* {(!albums || isLoading === true) && !artistId ? (
         <Skeleton />
       ) : (
         <SliderTemplate
           children={
             <>
-              {album?.data.map(
+              {albums?.data.map(
                 (album: {
                   album: { title: string; cover_xl: string; id: number };
                 }) => (
@@ -40,7 +41,7 @@ export const ArtistData = () => {
             </>
           }
         />
-      )}
+      )} */}
       <Contact />
       <Footer />
     </>
