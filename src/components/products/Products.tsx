@@ -8,6 +8,7 @@ import {
   useGetChartTracksQuery,
 } from "../../services/deezerApiCalls";
 import { Skeleton } from "../../shadcn/components/skeleton";
+import { Link } from "react-router-dom";
 
 export const Products = () => {
   const { data: artists, isLoading: loadArtists } =
@@ -29,14 +30,16 @@ export const Products = () => {
               {artists?.data.map(
                 (artist: { id: number; picture_xl: string; name: string }) => (
                   <SwiperSlide key={artist.id}>
-                    <p className="text-center text-base sm:text-xl w-34 truncate">
-                      {artist.name}
-                    </p>
-                    <img
-                      src={artist.picture_xl}
-                      alt={artist.name}
-                      className="w-48 mx-auto rounded"
-                    />
+                    <Link to={`/artist/${artist.id}`}>
+                      <p className="text-center text-base sm:text-xl w-34 truncate">
+                        {artist.name}
+                      </p>
+                      <img
+                        src={artist.picture_xl}
+                        alt={artist.name}
+                        className="w-48 mx-auto rounded"
+                      />
+                    </Link>
                   </SwiperSlide>
                 )
               )}
@@ -68,7 +71,7 @@ export const Products = () => {
                       {track.artist.name}
                     </p>
                     <img
-                      src={`https://e-cdns-images.dzcdn.net/images/cover/${track.md5_image}/250x250-000000-80-0-0.jpg `}
+                      src={`https://e-cdns-images.dzcdn.net/images/cover/${track.md5_image}/250x250-000000-80-0-0.jpg`}
                       alt={track.title}
                       className="w-48 mx-auto rounded"
                     />

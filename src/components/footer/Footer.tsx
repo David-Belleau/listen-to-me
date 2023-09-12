@@ -1,27 +1,31 @@
-import React from "react";
+import logoSite from '../../assets/images/logo_site.svg'
+import logoFacebook from '../../assets/images/logo-facebook.svg';
+import logoYoutube from '../../assets/images/logo-youtube.svg';
+import logoTwitter from '../../assets/images/logo-twitter.svg';
+import logoInstagram from '../../assets/images/logo-instagram.svg';
 
 const imgsSlider = [
   {
     link: "https://www.facebook.com",
-    src: "./images/logo-facebook.svg",
+    src: logoFacebook,
     alt: "logo de Facebook",
     className: "w-6",
   },
   {
     link: "https://www.youtube.com",
-    src: "./images/logo-youtube.svg",
+    src:logoYoutube,
     alt: "logo de Youtube",
     className: "w-6",
   },
   {
     link: "https://twitter.com",
-    src: "./images/logo-twitter.svg",
+    src:logoTwitter,
     alt: "logo de Twitter",
     className: "w-6",
   },
   {
     link: "https://www.instagram.com",
-    src: "./images/logo-instagram.svg",
+    src: logoInstagram,
     alt: "logo de Instagram",
     className: "w-6",
   },
@@ -34,7 +38,7 @@ export const Footer = () => {
       <div className="flex flex-col sm:flex-row sm:justify-around 2xl:justify-center text-center sm:text-start p-4 sm:p-8 gap-6 2xl:gap-40">
         <a href="/" className="m-auto sm:m-0">
           <img
-            src="./images/logo_site.svg"
+            src={logoSite}
             alt="logo du site"
             className="w-30"
           />
