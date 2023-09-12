@@ -6,6 +6,7 @@ import { Error404 } from "./pages/Error404";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
 import { MyAccount } from "./pages/MyAccount";
 import { ProductDetails } from "./pages/ProductDetails";
+import { ArtistId } from "./pages/ArtistId";
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
           <Route element={<PrivateRoutes />}>
             <Route path="/myaccount" element={<MyAccount />} />
             <Route path="/productdetails" element={<ProductDetails />} />
+            <Route path="/artist/:artistId" element={<ArtistId />} />
           </Route>
         </Routes>
       </ErrorBoundary>
