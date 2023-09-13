@@ -24,7 +24,7 @@ export const getMusicData = createApi({
     }),
     getArtistsData: builder.query({
       query: () => ({
-        url: "artistsData-[id]",
+        url: "artists-data",
       }),
     }),
   }),
