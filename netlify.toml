@@ -7,6 +7,6 @@ command = "npm run build"
   node_bundler = "esbuild"
 
 [[redirects]]
-  from = "/artist/:artistId"
+  from = ":artistId"
   to = "/src/netlify-functions/artists-data"
   status = 200
