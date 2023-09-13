@@ -5,3 +5,8 @@ command = "npm run build"
 [functions]
   directory = "/src/netlify-functions"
   node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/artist/:id"
+  to = "/src/netlify-functions/artists-data"
+  status = 200
