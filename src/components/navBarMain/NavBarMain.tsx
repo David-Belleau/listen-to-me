@@ -1,5 +1,5 @@
-import {SearchBar} from "./SearchBar";
-import {Cart} from "./Cart";
+import { SearchBar } from "./SearchBar";
+import { Cart } from "./Cart";
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
@@ -11,9 +11,9 @@ import {
   UserIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {Authentification} from "./Authentification/Authentification";
+import { Authentification } from "./Authentification/Authentification";
 import { UserMinusIcon } from "@heroicons/react/24/outline";
-import logoSite from '../../assets/images/logo_site.svg';
+import logoSite from "../../assets/images/logo_site.svg";
 
 const links = [
   {
@@ -52,11 +52,7 @@ export const NavBarMain = () => {
         <div className="flex items-center justify-between md:justify-center py-4 md:space-x-10">
           <div className="flex justify-start ">
             <a href="/">
-              <img
-                className="w-24"
-                src={logoSite}
-                alt="logo du site"
-              />
+              <img className="w-24" src={logoSite} alt="logo du site" />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -106,11 +102,9 @@ export const NavBarMain = () => {
             <div className="px-5 pt-5 pb-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="w-24"
-                    src="./images/logo_site.svg"
-                    alt="logo du site"
-                  />
+                  <a href="/">
+                    <img className="w-24" src={logoSite} alt="logo du site" />
+                  </a>
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center rounded-md bg-gray p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
@@ -157,8 +151,8 @@ export const NavBarMain = () => {
               </div>
             </div>
             <SearchBar />
-            <div className="space-y-6 py-6 px-5"/>
-              {/* <div>
+            <div className="space-y-6 py-6 px-5" />
+            {/* <div>
                 <a
                   href="/register"
                   className="flex w-full sm:w-6/12 m-auto items-center justify-center rounded-md border border-transparent bg-orange px-4 py-2 text-base font-medium text-gray shadow-sm"
@@ -180,4 +174,3 @@ export const NavBarMain = () => {
     </Popover>
   );
 };
-
