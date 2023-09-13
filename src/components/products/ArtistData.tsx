@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { Skeleton } from "../../shadcn/components/skeleton";
 import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
-import { handler } from "../../netlify-functions/artistsData-[id]";
+import { handler } from "../../netlify-functions/artists-data";
 
 export const ArtistData = () => {
   const { data: albums, isLoading } = useGetArtistsDataQuery("artistId");
