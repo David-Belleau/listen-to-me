@@ -1,5 +1,5 @@
 export const handler = (event) => {
-    const origin = event.headers?.origin || event.headers?.origin || 'undefined';
+    const origin = event?.headers?.origin || event?.headers?.origin || 'undefined';
     let allowedOrigin;
 
     switch (origin) {
