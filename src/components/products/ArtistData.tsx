@@ -9,7 +9,7 @@ import { SwiperSlide } from "swiper/react";
 
 export const ArtistData = () => {
   let {artistId} = useParams();
-  const { data: albums, isLoading } = useGetArtistsDataQuery('artist data');
+  const { data: albums, isLoading } = useGetArtistsDataQuery('artistId');
 
   return (
     <>
