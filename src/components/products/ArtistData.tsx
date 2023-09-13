@@ -8,8 +8,9 @@ import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
 
 export const ArtistData = () => {
-  let {artistId} = useParams();
-  const { data: albums, isLoading } = useGetArtistsDataQuery('artistId');
+  const { data: albums, isLoading } = useGetArtistsDataQuery("artistId");
+  let { artistId } = useParams();
+  localStorage.setItem("artistId", artistId!.toString());
 
   return (
     <>
