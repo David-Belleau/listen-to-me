@@ -3,9 +3,9 @@ import { handler as allowedOrigin } from "./allowedOrigin";
 
 
 export const handler = async (event) => {
-    const artistId = window.location.pathname.split('/')[2]
+    let currentArtistId = localStorage.getItem('artistId');
     try {
-        const response = await axios.get(`https://api.deezer.com/artist/${artistId}/top?limit=50`);
+        const response = await axios.get(`https://api.deezer.com/artist/${currentArtistId}/top?limit=50`);
         return {
             statusCode: 200,
             body: JSON.stringify(response.data),
