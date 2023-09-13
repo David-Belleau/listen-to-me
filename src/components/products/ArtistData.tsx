@@ -6,11 +6,10 @@ import { Link, useParams } from "react-router-dom";
 import { Skeleton } from "../../shadcn/components/skeleton";
 import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
+import { handler } from "../../netlify-functions/artistsData-[id]";
 
 export const ArtistData = () => {
   const { data: albums, isLoading } = useGetArtistsDataQuery("artistId");
-  let { artistId } = useParams();
-  localStorage.setItem("artistId", artistId!.toString());
 
   return (
     <>
