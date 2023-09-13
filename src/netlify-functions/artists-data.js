@@ -3,7 +3,7 @@ import { handler as allowedOrigin } from "./allowedOrigin";
 
 
 export const handler = async (event) => {
-    const artistId = event.queryStringParameters.artistId
+    const artistId = event?.queryStringParameters.artistId
     try {
         const response = await axios.get(`https://api.deezer.com/artist/${artistId}/top?limit=50`);
         return {
