@@ -19,17 +19,17 @@ describe("check elements presence", () => {
       screen.getByRole("heading", { name: "Top artistes" })
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Top morceaux" })
+      screen.getByRole("heading", { name: "Top titres" })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("heading", { name: "Top albums" })
     ).toBeInTheDocument();
   });
 
-  /* test("check links presence 'Voir tous les morceaux' and 'Voir tous les albums'", () => {
+  /* test("check links presence 'Voir tous les titres' and 'Voir tous les albums'", () => {
     render(<Products />);
     expect(
-      screen.getByRole("link", { name: "Voir tous les morceaux" })
+      screen.getByRole("link", { name: "Voir tous les titres" })
     ).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: "Voir tous les albums" })
