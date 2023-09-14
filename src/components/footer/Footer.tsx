@@ -1,71 +1,50 @@
-import logoSite from '../../assets/images/logo_site.svg'
-import logoFacebook from '../../assets/images/logo-facebook.svg';
-import logoYoutube from '../../assets/images/logo-youtube.svg';
-import logoTwitter from '../../assets/images/logo-twitter.svg';
-import logoInstagram from '../../assets/images/logo-instagram.svg';
-
-const imgsSlider = [
-  {
-    link: "https://www.facebook.com",
-    src: logoFacebook,
-    alt: "logo de Facebook",
-    className: "w-6",
-  },
-  {
-    link: "https://www.youtube.com",
-    src:logoYoutube,
-    alt: "logo de Youtube",
-    className: "w-6",
-  },
-  {
-    link: "https://twitter.com",
-    src:logoTwitter,
-    alt: "logo de Twitter",
-    className: "w-6",
-  },
-  {
-    link: "https://www.instagram.com",
-    src: logoInstagram,
-    alt: "logo de Instagram",
-    className: "w-6",
-  },
-];
+import logoSite from "../../assets/images/logo_site.svg";
+import {
+  SiTwitter,
+  SiFacebook,
+  SiYoutube,
+  SiInstagram,
+} from "react-icons/si";
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-gray">
-      <div className="flex flex-col sm:flex-row sm:justify-around 2xl:justify-center text-center sm:text-start p-4 sm:p-8 gap-6 2xl:gap-40">
+      <div className="flex flex-col sm:flex-row justify-evenly text-center sm:text-start p-4 sm:p-8 gap-6 2xl:gap-40">
         <a href="/" className="m-auto sm:m-0">
-          <img
-            src={logoSite}
-            alt="logo du site"
-            className="w-30"
-          />
+          <img src={logoSite} alt="logo du site" className="w-30" />
         </a>
         <div>
           <h3 className="text-base font-medium mb-4">Liens utiles</h3>
           <a href="/about-us">
-            <p className="italic text-sm">Qui sommes nous ?</p>
+            <p className="italic text-sm hover:text-orange">Qui sommes nous ?</p>
           </a>
           <a href="/personal-data">
-            <p className="italic text-sm">Données personnelles</p>
+            <p className="italic text-sm hover:text-orange">Données personnelles</p>
           </a>
         </div>
         <div>
           <h3 className="text-base font-medium mb-4">Suivez-nous sur</h3>
           <div className="flex flex-row justify-center items-center sm:justify-start gap-3">
-            {imgsSlider.map((img, index) => (
-              <a key={index} href={img.link}>
-                <img src={img.src} alt={img.alt} className={img.className} />
-              </a>
-            ))}
+            <a href="https://www.facebook.com">
+              <SiFacebook className="w-6 text-orange" />
+            </a>
+            <a href="https://www.youtube.com">
+              <SiYoutube className="w-6 text-orange" />
+            </a>
+            <a href="https://www.twitter.com">
+              <SiTwitter className="w-6 text-orange" />
+            </a>
+            <a href="https://www.instagram.com">
+              <SiInstagram className="w-6 text-orange" />
+            </a>
           </div>
         </div>
       </div>
-      <div className="h-px bg-black w-4/5 mx-auto"></div>
-      <p className="py-4 text-center text-sm">&copy; {currentYear} Listen to me</p>
+      <div className="h-px bg-black w-3/4 mx-auto"></div>
+      <p className="py-4 text-center text-sm">
+        &copy; {currentYear} Listen to me
+      </p>
     </footer>
   );
 };
-
