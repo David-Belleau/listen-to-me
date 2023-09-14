@@ -2,13 +2,13 @@ import { Header } from "../header/Header";
 import { Products } from "../products/Products";
 import { Contact } from "../contact/Contact";
 import { Footer } from "../footer/Footer";
-import { app_id, redirect_uri, uri } from "../../services/deezerConfig";
+import { app_id, environment, uri } from "../../services/deezerConfig";
 import { AuthButton } from "./AuthButton";
 
 export const Auth = () => {
   const handleClick = () => {
     // redirect to authenticate application
-    window.location.href = `${uri}auth.php?app_id=${app_id}&redirect_uri=${redirect_uri}&response_type=token&perms=basic_access,email`;
+    window.location.href = `${uri}auth.php?app_id=${app_id}&redirect_uri=${environment}&response_type=token&perms=basic_access,email`;
   };
 
   // get access token in url
