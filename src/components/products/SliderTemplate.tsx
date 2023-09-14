@@ -10,7 +10,7 @@ const SliderTemplate = ({
   return (
     <div className="my-4 mx-6 md:mx-10">
       <Swiper
-        slidesPerView={4}
+        slidesPerView={3}
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
         navigation={true}
