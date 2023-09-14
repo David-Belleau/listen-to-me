@@ -1,11 +1,10 @@
 import axios from "axios"
 import { handler as allowedOrigin } from "./allowedOrigin";
-import { getIdData } from "../utils/functions";
 
-export const handler = async (event) => {
-    getIdData()
+export const handler = async (event,artistId) => {
+    const id = event?.pathParameters?.id || artistId
     try {
-        const response = await axios.get(`https://api.deezer.com/artist/${getIdData()}/top?limit=50`);
+        const response = await axios.get(`https://api.deezer.com/artist/${id}/top?limit=50`);
         return {
             statusCode: 200,
             body: JSON.stringify(response.data),
