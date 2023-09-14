@@ -4,9 +4,8 @@ import { ErrorFallback } from "./components/error/ErrorFallback";
 import { Home } from "./pages/Home";
 import { Error404 } from "./pages/Error404";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
-import { MyAccount } from "./pages/MyAccount";
-import { ProductDetails } from "./pages/ProductDetails";
-import { ArtistId } from "./pages/ArtistId";
+import { AlbumId } from "./pages/AlbumId";
+import { TrackId } from "./pages/TrackId";
 
 export const App = () => {
   return (
@@ -16,9 +15,8 @@ export const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
           <Route element={<PrivateRoutes />}>
-            <Route path="/myaccount" element={<MyAccount />} />
-            <Route path="/productdetails" element={<ProductDetails />} />
-            <Route path="/artist/:artistId" element={<ArtistId />} />
+            <Route path="/track/:trackId" element={<TrackId />} />
+            <Route path="/album/:albumId" element={<AlbumId />} />
           </Route>
         </Routes>
       </ErrorBoundary>
