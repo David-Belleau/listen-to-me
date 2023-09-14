@@ -1,9 +1,10 @@
 import axios from "axios"
+import { api_name } from "../services/deezerConfig";
 import { handler as allowedOrigin } from "./allowedOrigin";
 
 export const handler = async (event) => {
     try {
-        const response = await axios.get('https://api.deezer.com/chart/0/albums');
+        const response = await axios.get(`${api_name}chart/0/albums`);
         return {
             statusCode: 200,
             body: JSON.stringify(response.data),
