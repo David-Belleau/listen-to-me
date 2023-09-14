@@ -1,13 +1,15 @@
+import { development, production } from "../services/deezerConfig";
+
 export const handler = (event) => {
     const origin = event?.headers?.origin || event?.headers?.origin || 'undefined';
     let allowedOrigin;
 
     switch (origin) {
-        case 'https://listen-to-me.netlify.app':
-            allowedOrigin = 'https://listen-to-me.netlify.app';
+        case production:
+            allowedOrigin = production;
             break;
-        case 'http://localhost:3000':
-            allowedOrigin = 'http://localhost:3000';
+        case development:
+            allowedOrigin = development;
             break;
         case 'undefined':
             allowedOrigin = 'undefined';
