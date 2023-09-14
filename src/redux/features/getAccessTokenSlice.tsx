@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const authSlice = createSlice({
-  name: "authCode",
+const accessTokenSlice = createSlice({
+  name: "accessToken",
   initialState: "",
   reducers: {
-    addAuthCode: (state, action) => state + action.payload,
+    addAccessToken: (state, action) => state + action.payload,
   },
   /*  removeArticle: (state, action) => {
       return state.filter(article => article.id !== action.payload.id);
@@ -14,6 +14,6 @@ const authSlice = createSlice({
     } */
 });
 
-export const { addAuthCode /* , removeArticle, setArticles */ } =
-  authSlice.actions;
-export default authSlice.reducer;
+export const { addAccessToken /* , removeArticle, setArticles */ } =
+  accessTokenSlice.actions;
+export default accessTokenSlice.reducer;
