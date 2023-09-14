@@ -19,7 +19,7 @@ export const Form = () => {
                     type="text"
                     name="first-name"
                     id="first-name"
-                    autoComplete="given-name"
+                    autoComplete="on"
                     className="bg-gray mt-1 block w-full rounded-md border-black shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
                   />
                 </div>
@@ -35,7 +35,7 @@ export const Form = () => {
                     type="text"
                     name="last-name"
                     id="last-name"
-                    autoComplete="family-name"
+                    autoComplete="on"
                     className="bg-gray mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
                   />
                 </div>
@@ -51,7 +51,7 @@ export const Form = () => {
                     type="text"
                     name="email-address"
                     id="email-address"
-                    autoComplete="email"
+                    autoComplete="on"
                     className="bg-gray mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
                   />
                 </div>
@@ -67,7 +67,6 @@ export const Form = () => {
                     type="text"
                     name="message"
                     id="message"
-                    autoComplete="message"
                     className="bg-gray mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange focus:ring-orange sm:text-sm"
                   />
                 </div>
