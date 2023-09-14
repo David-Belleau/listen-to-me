@@ -1,4 +1,3 @@
-import { CallToActionButton, SeeAllProductsButton } from "./ProductButtons";
 import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
 import { Separator } from "./Separator";
@@ -9,6 +8,7 @@ import {
 } from "../../services/deezerApiCalls";
 import { Skeleton } from "../../shadcn/components/skeleton";
 import { Link } from "react-router-dom";
+import { SiYoutubemusic } from "react-icons/si";
 
 export const Products = () => {
   const { data: artists, isLoading: loadArtists } =
@@ -30,16 +30,14 @@ export const Products = () => {
               {artists?.data.map(
                 (artist: { id: number; picture_xl: string; name: string }) => (
                   <SwiperSlide key={artist.id}>
-                    <Link to={`/artist/${artist.id}`}>
-                      <p className="text-center text-base sm:text-xl w-34 truncate">
-                        {artist.name}
-                      </p>
+                    <p className="text-center text-sm sm:text-xl w-34 truncate">
+                      {artist.name}
+                    </p>
                       <img
                         src={artist.picture_xl}
                         alt={artist.name}
                         className="w-48 mx-auto rounded"
                       />
-                    </Link>
                   </SwiperSlide>
                 )
               )}
@@ -47,7 +45,7 @@ export const Products = () => {
           }
         />
       )}
-      <Separator children="Top morceaux" />
+      <Separator children="Top titres" />
       {!tracks || loadTracks === true ? (
         <Skeleton />
       ) : (
@@ -64,17 +62,20 @@ export const Products = () => {
                   };
                 }) => (
                   <SwiperSlide key={track.id}>
-                    <p className="text-center text-base sm:text-xl w-34 truncate">
+                    <p className="text-center text-sm sm:text-xl w-34 truncate">
                       "{track.title}"
                     </p>
-                    <p className="text-center text-base sm:text-xl w-34 truncate">
+                    <p className="text-center text-sm sm:text-xl w-34 truncate italic">
                       {track.artist.name}
                     </p>
-                    <img
-                      src={`https://e-cdns-images.dzcdn.net/images/cover/${track.md5_image}/250x250-000000-80-0-0.jpg`}
-                      alt={track.title}
-                      className="w-48 mx-auto rounded"
-                    />
+                    <Link to={`track/${track.id}`}>
+                      <SiYoutubemusic className="text-orange w-4 sm:w-8 h-8 mx-auto my-1 sm:my-2 " />
+                      <img
+                        src={`https://e-cdns-images.dzcdn.net/images/cover/${track.md5_image}/250x250-000000-80-0-0.jpg`}
+                        alt={track.title}
+                        className="w-48 mx-auto rounded"
+                      />
+                    </Link>
                   </SwiperSlide>
                 )
               )}
@@ -82,10 +83,6 @@ export const Products = () => {
           }
         />
       )}
-      {/* <SeeAllProductsButton
-        url="/allTracks"
-        children="Voir tous les morceaux"
-      /> */}
       <Separator children="Top albums" />
       {!albums || loadAlbums === true ? (
         <Skeleton />
@@ -101,17 +98,20 @@ export const Products = () => {
                   artist: { name: string };
                 }) => (
                   <SwiperSlide key={album.id}>
-                    <p className="text-center text-base sm:text-xl w-34 truncate">
+                    <p className="text-center text-sm sm:text-xl w-34 truncate">
                       "{album.title}"
                     </p>
-                    <p className="text-center text-base sm:text-xl w-34 truncate">
+                    <p className="text-center text-sm sm:text-xl w-34 truncate italic">
                       {album.artist.name}
                     </p>
-                    <img
-                      src={album.cover_xl}
-                      alt={album.title}
-                      className="w-48 mx-auto rounded"
-                    />
+                    <Link to={`album/${album.id}`}>
+                      <SiYoutubemusic className="text-orange w-4 sm:w-8 h-8 mx-auto my-1 sm:my-2 " />
+                      <img
+                        src={album.cover_xl}
+                        alt={album.title}
+                        className="w-48 mx-auto rounded"
+                      />
+                    </Link>
                   </SwiperSlide>
                 )
               )}
@@ -119,7 +119,6 @@ export const Products = () => {
           }
         />
       )}
-      {/* <SeeAllProductsButton url="/allAlbums" children="Voir tous les albums" /> */}
     </>
   );
 };
