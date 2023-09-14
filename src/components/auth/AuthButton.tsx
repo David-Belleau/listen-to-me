@@ -1,15 +1,16 @@
-import logoSite from '../../assets/images/logo_site.svg'
+import logoSite from "../../assets/images/logo_site.svg";
+import bgSite from "../../assets/images/bg_site.jpg";
 
-type AuthButtonProps ={
-  handleClick: () => void,
-}
+type AuthButtonProps = {
+  handleClick: () => void;
+};
 
 export const AuthButton = ({ handleClick }: AuthButtonProps) => {
   return (
     <div
-      style={{ backgroundImage: `url( 'images/bg_site.jpg')` }}
+      style={{ backgroundImage: `url(${bgSite})` }}
       className="bg-cover bg-center bg-no-repeat h-screen"
-      aria-label='bg-site'
+      aria-label="bg-site"
     >
       <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 flex flex-col items-center gap-10">
         <img src={logoSite} alt="logo du site" className="w-48" />
