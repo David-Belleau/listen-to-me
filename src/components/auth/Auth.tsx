@@ -7,18 +7,20 @@ import { AuthButton } from "./AuthButton";
 
 export const Auth = () => {
   const handleClick = () => {
+    // redirect to authenticate application
     window.location.href = `${uri}auth.php?app_id=${app_id}&redirect_uri=${redirect_uri}&response_type=token&perms=basic_access,email`;
   };
 
-  let authCode = window.location.hash.substring(1).split("&")[0].split("=")[1];
+  // get access token in url
+  let accessToken = window.location.hash.substring(1).split("&")[0].split("=")[1];
 
-  if (authCode && authCode?.length !== 0) {
-    localStorage.setItem("currentAuthCode", authCode);
+  if (accessToken && accessToken?.length !== 0) {
+    localStorage.setItem("currentAccessToken", accessToken);
   }
 
-  let currentAuthCode = localStorage.getItem("currentAuthCode");
+  let currentAccessToken = localStorage.getItem("currentAccessToken");
 
-  if (currentAuthCode && currentAuthCode?.length !== 0) {
+  if (currentAccessToken && currentAccessToken?.length !== 0) {
     return (
       <>
         <Header />
