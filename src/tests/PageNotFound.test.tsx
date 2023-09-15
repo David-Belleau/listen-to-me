@@ -4,7 +4,7 @@ import { PageNotFound } from "../components/error/PageNotFound";
 test("check elements presence", () => {
   render(<PageNotFound />);
   expect(
-    screen.getByRole("img", { name: "Icon de prudence" })
+    screen.getByLabelText("Icône de prudence" )
   ).toBeInTheDocument();
   expect(
     screen.getByRole("heading", { name: "Erreur 404" })
