@@ -6,8 +6,10 @@ test("check elements presence", () => {
   render(
     <ErrorFallback error={Error(message)} resetErrorBoundary={() => {}} />
   );
-  expect(screen.getByAltText("Icon de prudence")).toBeInTheDocument();
-  expect(screen.getByText("Une erreur s'est produite !")).toBeInTheDocument();
+  expect(
+    screen.getByLabelText("Icône de prudence" )
+  ).toBeInTheDocument();
+    expect(screen.getByText("Une erreur s'est produite !")).toBeInTheDocument();
   expect(screen.getByText(message)).toBeInTheDocument();
   expect(
     screen.getByRole("button", {
