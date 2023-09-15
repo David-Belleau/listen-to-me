@@ -1,6 +1,3 @@
-import { Header } from "../header/Header";
-import { Contact } from "../contact/Contact";
-import { Footer } from "../footer/Footer";
 import { useParams } from "react-router-dom";
 import { Skeleton } from "../../shadcn/components/skeleton";
 import { Separator } from "./Separator";
@@ -8,10 +5,14 @@ import { Separator } from "./Separator";
 export const TrackData = () => {
   let { trackId } = useParams();
 
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
   return (
     <>
-      <Header />
-      <Separator children="Titre à écouter"/>
+      <Separator children="Titre à écouter" />
       {trackId && trackId?.length !== 0 ? (
         <>
           <iframe
@@ -23,8 +24,6 @@ export const TrackData = () => {
       ) : (
         <Skeleton />
       )}
-      <Contact />
-      <Footer />
     </>
   );
 };

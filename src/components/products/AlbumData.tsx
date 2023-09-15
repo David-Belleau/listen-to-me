@@ -1,6 +1,3 @@
-import { Header } from "../header/Header";
-import { Contact } from "../contact/Contact";
-import { Footer } from "../footer/Footer";
 import { useParams } from "react-router-dom";
 import { Skeleton } from "../../shadcn/components/skeleton";
 import { Separator } from "./Separator";
@@ -8,9 +5,13 @@ import { Separator } from "./Separator";
 export const AlbumData = () => {
   let { albumId } = useParams();
 
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
   return (
     <>
-      <Header />
       <Separator children="Liste des titres" />
       {albumId && albumId?.length !== 0 ? (
         <>
@@ -23,8 +24,6 @@ export const AlbumData = () => {
       ) : (
         <Skeleton />
       )}
-      <Contact />
-      <Footer />
     </>
   );
 };
