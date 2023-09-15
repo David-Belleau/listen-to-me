@@ -1,4 +1,3 @@
-import logoSite from "../../assets/images/logo_site.svg";
 import {
   SiTwitter,
   SiFacebook,
@@ -12,7 +11,7 @@ export const Footer = () => {
     <footer className="bg-gray">
       <div className="flex flex-col sm:flex-row justify-evenly text-center sm:text-start p-4 sm:p-8 gap-6 2xl:gap-40">
         <a href="/" className="m-auto sm:m-0">
-          <img src={logoSite} alt="logo du site" className="w-30" />
+          <img src='/images/logo_site.png' alt="logo du site" className="w-28" />
         </a>
         <div>
           <h3 className="text-base font-medium mb-4">Liens utiles</h3>
@@ -27,16 +26,16 @@ export const Footer = () => {
           <h3 className="text-base font-medium mb-4">Suivez-nous sur</h3>
           <div className="flex flex-row justify-center items-center sm:justify-start gap-3">
             <a href="https://www.facebook.com">
-              <SiFacebook className="w-6 text-orange" />
+              <SiFacebook className="w-6 text-orange" title='logo de Facebook' />
             </a>
             <a href="https://www.youtube.com">
-              <SiYoutube className="w-6 text-orange" />
+              <SiYoutube className="w-6 text-orange" title='logo de Youtube'/>
             </a>
             <a href="https://www.twitter.com">
-              <SiTwitter className="w-6 text-orange" />
+              <SiTwitter className="w-6 text-orange" title='logo de Twitter'/>
             </a>
             <a href="https://www.instagram.com">
-              <SiInstagram className="w-6 text-orange" />
+              <SiInstagram className="w-6 text-orange" title='logo de Instagram'/>
             </a>
           </div>
         </div>
