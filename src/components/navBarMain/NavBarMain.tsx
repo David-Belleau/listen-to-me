@@ -13,7 +13,6 @@ import {
 } from "@heroicons/react/24/outline";
 import { Authentification } from "./Authentification/Authentification";
 import { UserMinusIcon } from "@heroicons/react/24/outline";
-import logoSite from "../../assets/images/logo_site.svg";
 
 const links = [
   {
@@ -52,7 +51,7 @@ export const NavBarMain = () => {
         <div className="flex items-center justify-between md:justify-center py-4 md:space-x-10">
           <div className="flex justify-start ">
             <a href="/">
-              <img className="w-24" src={logoSite} alt="logo du site" />
+              <img className="w-24" src='/images/logo_site.png' alt="logo du site" />
             </a>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -103,7 +102,7 @@ export const NavBarMain = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <a href="/">
-                    <img className="w-24" src={logoSite} alt="logo du site" />
+                    <img className="w-24" src='/images/logo_site.png' alt="logo du site" />
                   </a>
                 </div>
                 <div className="-mr-2">
