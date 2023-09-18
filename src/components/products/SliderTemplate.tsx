@@ -1,5 +1,5 @@
 import { Swiper } from "swiper/react";
-import { SliderProps } from "../../utils/types/components";
+import { SliderProps } from "../../utils/types";
 import "swiper/css/pagination";
 import "swiper/css";
 import { Navigation, Pagination } from "swiper";
