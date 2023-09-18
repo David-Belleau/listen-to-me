@@ -4,7 +4,7 @@ import {Footer} from '../components/footer/Footer'
 test("check elements presence",()=>{
     const currentYear = new Date().getFullYear()
     render(<Footer/>)
-    expect(screen.getByRole('link', {name:'logo du site'})).toBeInTheDocument()
+    expect(screen.getByText('Listen to me')).toBeInTheDocument()
     expect(screen.getByRole('heading', {name:'Liens utiles'})).toBeInTheDocument()
     expect(screen.getByRole('link', {name:'Qui sommes nous ?'})).toBeInTheDocument()
     expect(screen.getByRole('link', {name:'Données personnelles'})).toBeInTheDocument()
