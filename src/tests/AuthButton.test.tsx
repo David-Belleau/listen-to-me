@@ -5,7 +5,7 @@ import userEvent from "@testing-library/user-event";
 test("check elements presence", () => {
   render(<AuthButton handleClick={() => {}} />);
   expect(screen.getByLabelText("bg-site")).toBeInTheDocument();
-  expect(screen.getByAltText("logo du site")).toBeInTheDocument();
+  expect(screen.getByText("Listen to me")).toBeInTheDocument();
   expect(
     screen.getByRole("button", { name: "Se connecter" })
   ).toBeInTheDocument();
