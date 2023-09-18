@@ -6,10 +6,14 @@ import { Error404 } from "./pages/Error404";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
 import { AlbumId } from "./pages/AlbumId";
 import { TrackId } from "./pages/TrackId";
+import { ToggleBg, ToggleText } from "./utils/darkMode";
 
 export const App = () => {
+  const { toggleBg } = ToggleBg();
+  const { toggleText } = ToggleText();
+
   return (
-    <>
+    <div className={toggleBg + " " + toggleText}>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,6 +24,6 @@ export const App = () => {
           </Route>
         </Routes>
       </ErrorBoundary>
-    </>
+    </div>
   );
 };
