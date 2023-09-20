@@ -3,7 +3,6 @@ import { Provider } from "react-redux";
 import { store } from "../redux/app/store";
 import { BrowserRouter as Router } from "react-router-dom";
 import { ProvidersProps } from "./types";
-import { AppLoading } from "../shadcn/components/Skeleton";
 import { ErrorFallback } from "../components/error/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -12,11 +11,9 @@ export const Providers = ({ children }: ProvidersProps) => {
   return (
     <Provider store={store}>
       <Router>
-        <React.Suspense fallback={<AppLoading />}>
-          <ErrorBoundary FallbackComponent={ErrorFallback}>
-            {children}
-          </ErrorBoundary>
-        </React.Suspense>
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          {children}
+        </ErrorBoundary>
       </Router>
     </Provider>
   );
