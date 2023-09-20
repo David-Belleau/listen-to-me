@@ -3,7 +3,7 @@ import { Contact } from "../components/contact/Contact";
 import { Footer } from "../components/footer/Footer";
 import { Header } from "../components/header/Header";
 
-export const TrackId = () => {
+const TrackId = () => {
   return (
     <>
       <Header />
@@ -13,3 +13,5 @@ export const TrackId = () => {
     </>
   );
 };
+
+export default TrackId;

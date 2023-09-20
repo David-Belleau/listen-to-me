@@ -18,10 +18,10 @@ export const AuthButton = ({ handleClick }: AuthButtonProps) => {
           <div className="text-orange h-12 border-4 rounded-full p-2">
             <LuHeadphones className="text-orange" size={20} />
           </div>
-          <p className="font-black text-2xl">Listen to me</p>
+          <p className="font-black text-2xl w-48 text-center">Listen to me</p>
         </div>
         <button
-          className="rounded-lg m-auto bg-black text-white px-4 py-2 font-semibold cursor-pointer transition-all duration-400 ease-in-out hover:bg-orange focus:bg-neutral-200 focus:text-black"
+          className="rounded-lg m-auto bg-black hover:bg-orange text-white hover:text-black px-4 py-2 font-semibold cursor-pointer transition-all duration-400 ease-in-out focus:bg-white focus:text-black"
           onClick={handleClick}
         >
           Se connecter

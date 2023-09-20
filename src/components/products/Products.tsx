@@ -6,7 +6,7 @@ import {
   useGetChartArtistsQuery,
   useGetChartTracksQuery,
 } from "../../services/deezerApiCalls";
-import { Skeleton } from "../../shadcn/components/skeleton";
+import { Skeleton } from "../../shadcn/components/Skeleton";
 import { Link } from "react-router-dom";
 import { SiYoutubemusic } from "react-icons/si";
 
@@ -20,7 +20,7 @@ export const Products = () => {
 
   return (
     <>
-      <Separator children="Top artistes" />
+    {/*   <Separator children="Top artistes" />
       {!artists || loadArtists === true ? (
         <Skeleton />
       ) : (
@@ -33,18 +33,18 @@ export const Products = () => {
                     <p className="text-center text-sm sm:text-xl w-34 truncate">
                       {artist.name}
                     </p>
-                      <img
-                        src={artist.picture_xl}
-                        alt={artist.name}
-                        className="w-48 mx-auto rounded"
-                      />
+                    <img
+                      src={artist.picture_xl}
+                      alt={artist.name}
+                      className="w-48 mx-auto rounded"
+                    />
                   </SwiperSlide>
                 )
               )}
             </>
           }
         />
-      )}
+      )} */}
       <Separator children="Top titres" />
       {!tracks || loadTracks === true ? (
         <Skeleton />
@@ -62,8 +62,8 @@ export const Products = () => {
                   };
                 }) => (
                   <SwiperSlide key={track.id}>
-                    <p className="text-center text-sm sm:text-xl w-34 truncate">
-                      "{track.title}"
+                    <p className="text-center text-sm sm:text-xl w-34 truncate font-semibold">
+                      {track.title}
                     </p>
                     <p className="text-center text-sm sm:text-xl w-34 truncate italic">
                       {track.artist.name}
@@ -98,8 +98,8 @@ export const Products = () => {
                   artist: { name: string };
                 }) => (
                   <SwiperSlide key={album.id}>
-                    <p className="text-center text-sm sm:text-xl w-34 truncate">
-                      "{album.title}"
+                    <p className="text-center text-sm sm:text-xl w-34 truncate font-semibold">
+                      {album.title}
                     </p>
                     <p className="text-center text-sm sm:text-xl w-34 truncate italic">
                       {album.artist.name}

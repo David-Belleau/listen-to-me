@@ -1,12 +1,18 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { ErrorBoundary } from "react-error-boundary";
-import { ErrorFallback } from "./components/error/ErrorFallback";
-import { Home } from "./pages/Home";
-import { Error404 } from "./pages/Error404";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
-import { AlbumId } from "./pages/AlbumId";
-import { TrackId } from "./pages/TrackId";
 import { ToggleBg, ToggleText } from "./utils/darkMode";
+import { AppLoading } from "./shadcn/components/Skeleton";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const Error404 = React.lazy(() => import("./pages/Error404"));
+
+const TrackId = React.lazy(
+  () => import(/* webpackPrefetch: true */ "./pages/TrackId")
+);
+const AlbumId = React.lazy(
+  () => import(/* webpackPrefetch: true */ "./pages/AlbumId")
+);
 
 export const App = () => {
   const { toggleBg } = ToggleBg();
@@ -14,7 +20,7 @@ export const App = () => {
 
   return (
     <div className={toggleBg + " " + toggleText}>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <React.Suspense fallback={<AppLoading />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
@@ -23,7 +29,7 @@ export const App = () => {
             <Route path="/album/:albumId" element={<AlbumId />} />
           </Route>
         </Routes>
-      </ErrorBoundary>
+      </React.Suspense>
     </div>
   );
 };

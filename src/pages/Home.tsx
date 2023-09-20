@@ -1,5 +1,7 @@
 import { Auth } from "../components/auth/Auth";
 
-export const Home = () => {
+const Home = () => {
   return <Auth />;
 };
+
+export default Home

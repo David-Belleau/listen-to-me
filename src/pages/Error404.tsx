@@ -1,6 +1,7 @@
 import {PageNotFound} from "../components/error/PageNotFound";
 
-export const Error404 = () => {
+const Error404 = () => {
   return <PageNotFound />;
 };
 
+export default Error404
