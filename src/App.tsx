@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
 import { ToggleBg, ToggleText } from "./utils/darkMode";
-import { AppLoading } from "./shadcn/components/Skeleton";
+import { AppLoading } from "./components/loading/Skeleton";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Error404 = React.lazy(() => import("./pages/Error404"));

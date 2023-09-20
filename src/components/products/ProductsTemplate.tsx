@@ -1,4 +1,4 @@
-import { Skeleton } from "../../shadcn/components/Skeleton";
+import { Skeleton } from "../loading/Skeleton";
 
 export const ProductsTemplate = (
   products:{},

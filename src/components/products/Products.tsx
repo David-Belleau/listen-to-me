@@ -6,7 +6,7 @@ import {
   useGetChartArtistsQuery,
   useGetChartTracksQuery,
 } from "../../services/deezerApiCalls";
-import { Skeleton } from "../../shadcn/components/Skeleton";
+import { Skeleton } from "../loading/Skeleton";
 import { Link } from "react-router-dom";
 import { SiYoutubemusic } from "react-icons/si";
 

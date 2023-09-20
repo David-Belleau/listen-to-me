@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Skeleton } from "../../shadcn/components/Skeleton";
+import { Skeleton } from "../loading/Skeleton";
 import { Separator } from "./Separator";
 
 export const TrackData = () => {
