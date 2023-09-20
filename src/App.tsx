@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { PrivateRoutes } from "./components/auth/PrivateRoutes";
 import { ToggleBg, ToggleText } from "./utils/darkMode";
-import { AppLoading } from "./shadcn/components/Skeleton";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
@@ -20,16 +19,14 @@ export const App = () => {
 
   return (
     <div className={toggleBg + " " + toggleText}>
-      <React.Suspense fallback={<AppLoading />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error404 />} />
-          <Route element={<PrivateRoutes />}>
-            <Route path="/track/:trackId" element={<TrackId />} />
-            <Route path="/album/:albumId" element={<AlbumId />} />
-          </Route>
-        </Routes>
-      </React.Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error404 />} />
+        <Route element={<PrivateRoutes />}>
+          <Route path="/track/:trackId" element={<TrackId />} />
+          <Route path="/album/:albumId" element={<AlbumId />} />
+        </Route>
+      </Routes>
     </div>
   );
 };
