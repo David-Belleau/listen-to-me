@@ -1,7 +1,7 @@
 import { ToggleBg } from "../../utils/darkMode";
-import { ProductProps } from "../../utils/types";
+import { ProductsProps } from "../../utils/types";
 
-export const SeparatorTemplate = ({children}: ProductProps) => {
+export const SeparatorTemplate = ({children}: ProductsProps) => {
   const { toggleBg } = ToggleBg();
 
   return (
