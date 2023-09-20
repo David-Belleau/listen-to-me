@@ -9,7 +9,6 @@ import {
 } from "../../services/deezerApiCalls";
 import { Skeleton } from "../loading/Skeleton";
 import { Link } from "react-router-dom";
-import { SiYoutubemusic } from "react-icons/si";
 
 export const Products = () => {
   const { data: artists, isLoading: loadArtists } =
@@ -18,11 +17,12 @@ export const Products = () => {
     useGetChartTracksQuery("chart tracks");
   const { data: albums, isLoading: loadAlbums } =
     useGetChartAlbumsQuery("chart albums");
-    const { data: playlists, isLoading: loadPlaylists } = useGetChartPlaylistsQuery("chart playlists");
-  
+  const { data: playlists, isLoading: loadPlaylists } =
+    useGetChartPlaylistsQuery("chart playlists");
+
   return (
     <>
-    {/*   <Separator children="Top artistes" />
+      {/*   <Separator children="Top artistes" />
       {!artists || loadArtists === true ? (
         <Skeleton />
       ) : (
@@ -71,7 +71,6 @@ export const Products = () => {
                       {track.artist.name}
                     </p>
                     <Link to={`track/${track.id}`}>
-                      <SiYoutubemusic className="text-orange w-4 sm:w-8 h-8 mx-auto my-1 sm:my-2 " />
                       <img
                         src={`https://e-cdns-images.dzcdn.net/images/cover/${track.md5_image}/250x250-000000-80-0-0.jpg`}
                         alt={track.title}
@@ -107,7 +106,6 @@ export const Products = () => {
                       {album.artist.name}
                     </p>
                     <Link to={`album/${album.id}`}>
-                      <SiYoutubemusic className="text-orange w-4 sm:w-8 h-8 mx-auto my-1 sm:my-2 " />
                       <img
                         src={album.cover_xl}
                         alt={album.title}
@@ -129,16 +127,22 @@ export const Products = () => {
           children={
             <>
               {playlists?.data.map(
-                (playlist: { id: number; picture_xl: string; title: string }) => (
+                (playlist: {
+                  id: number;
+                  picture_xl: string;
+                  title: string;
+                }) => (
                   <SwiperSlide key={playlist.id}>
                     <p className="text-center text-sm sm:text-xl w-34 truncate">
                       {playlist.title}
                     </p>
-                    <img
-                      src={playlist.picture_xl}
-                      alt={playlist.title}
-                      className="w-48 mx-auto rounded"
-                    />
+                    <Link to={`playlist/${playlist.id}`}>
+                      <img
+                        src={playlist.picture_xl}
+                        alt={playlist.title}
+                        className="w-48 mx-auto rounded"
+                      />
+                    </Link>
                   </SwiperSlide>
                 )
               )}
