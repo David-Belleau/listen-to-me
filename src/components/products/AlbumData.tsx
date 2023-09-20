@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Skeleton } from "../loading/Skeleton";
-import { Separator } from "./Separator";
+import { SeparatorTemplate } from "./SeparatorTemplate";
 
 export const AlbumData = () => {
   let { albumId } = useParams();
@@ -12,7 +12,7 @@ export const AlbumData = () => {
 
   return (
     <>
-      <Separator children="Liste des titres" />
+      <SeparatorTemplate children="Liste des titres" />
       {albumId && albumId?.length !== 0 ? (
         <>
           <iframe

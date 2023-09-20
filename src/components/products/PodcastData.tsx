@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Skeleton } from "../loading/Skeleton";
-import { Separator } from "./Separator";
+import { SeparatorTemplate } from "./SeparatorTemplate";
 
 export const PodcastData = () => {
   let { podcastId } = useParams();
@@ -12,7 +12,7 @@ export const PodcastData = () => {
 
   return (
     <>
-      <Separator children="Liste des podcasts" />
+      <SeparatorTemplate children="Liste des podcasts" />
       {podcastId && podcastId?.length !== 0 ? (
         <>
           <iframe

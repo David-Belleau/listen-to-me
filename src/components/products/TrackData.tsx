@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Skeleton } from "../loading/Skeleton";
-import { Separator } from "./Separator";
+import { SeparatorTemplate } from "./SeparatorTemplate";
 
 export const TrackData = () => {
   let { trackId } = useParams();
@@ -12,7 +12,7 @@ export const TrackData = () => {
 
   return (
     <>
-      <Separator children="Titre à écouter" />
+      <SeparatorTemplate children="Titre à écouter" />
       {trackId && trackId?.length !== 0 ? (
         <>
           <iframe

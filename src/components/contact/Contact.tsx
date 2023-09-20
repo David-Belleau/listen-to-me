@@ -1,10 +1,10 @@
-import { Separator } from "../products/Separator";
+import { SeparatorTemplate } from "../products/SeparatorTemplate";
 import { Form } from "./Form";
 
 export const Contact = () => {
   return (
     <>
-      <Separator children="Contactez-nous" />
+      <SeparatorTemplate children="Contactez-nous" />
       <div className="flex flex-col sm:flex-row justify-center sm:items-center lg:items-end mb-10 sm:ml-5 sm:gap-2">
         <div>
           <img
