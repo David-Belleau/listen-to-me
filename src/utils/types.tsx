@@ -8,9 +8,15 @@ export type AppDispatch = typeof store.dispatch;
 export type SliderProps = {
   children: JSX.Element;
 };
-export type ProductProps = {
+export type ProductsProps = {
   url?: string;
   children?: string;
+};
+export type ProductsTemplateProps = {
+  title: string;
+  products: {};
+  loading: boolean;
+  template: JSX.Element;
 };
 export type ProvidersProps = {
   children: JSX.Element;
