@@ -1,9 +1,8 @@
 import SliderTemplate from "./SliderTemplate";
 import { SwiperSlide } from "swiper/react";
-import { Separator } from "./Separator";
+import { SeparatorTemplate } from "./SeparatorTemplate";
 import {
   useGetChartAlbumsQuery,
-  useGetChartArtistsQuery,
   useGetChartPlaylistsQuery,
   useGetChartPodcastsQuery,
   useGetChartTracksQuery,
@@ -12,8 +11,6 @@ import { Skeleton } from "../loading/Skeleton";
 import { Link } from "react-router-dom";
 
 export const Products = () => {
-  const { data: artists, isLoading: loadArtists } =
-    useGetChartArtistsQuery("chart artists");
   const { data: tracks, isLoading: loadTracks } =
     useGetChartTracksQuery("chart tracks");
   const { data: albums, isLoading: loadAlbums } =
@@ -25,32 +22,7 @@ export const Products = () => {
 
   return (
     <>
-      {/*   <Separator children="Top artistes" />
-      {!artists || loadArtists === true ? (
-        <Skeleton />
-      ) : (
-        <SliderTemplate
-          children={
-            <>
-              {artists?.data.map(
-                (artist: { id: number; picture_xl: string; name: string }) => (
-                  <SwiperSlide key={artist.id}>
-                    <p className="text-center text-sm sm:text-xl w-34 truncate">
-                      {artist.name}
-                    </p>
-                    <img
-                      src={artist.picture_xl}
-                      alt={artist.name}
-                      className="w-48 mx-auto rounded"
-                    />
-                  </SwiperSlide>
-                )
-              )}
-            </>
-          }
-        />
-      )} */}
-      <Separator children="Top titres" />
+      <SeparatorTemplate children="Top titres" />
       {!tracks || loadTracks === true ? (
         <Skeleton />
       ) : (
@@ -87,7 +59,7 @@ export const Products = () => {
           }
         />
       )}
-      <Separator children="Top albums" />
+      <SeparatorTemplate children="Top albums" />
       {!albums || loadAlbums === true ? (
         <Skeleton />
       ) : (
@@ -122,7 +94,7 @@ export const Products = () => {
           }
         />
       )}
-      <Separator children="Top playlists" />
+      <SeparatorTemplate children="Top playlists" />
       {!playlists || loadPlaylists === true ? (
         <Skeleton />
       ) : (
@@ -153,7 +125,7 @@ export const Products = () => {
           }
         />
       )}
-      <Separator children="Top podcasts" />
+      <SeparatorTemplate children="Top podcasts" />
       {!podcasts || loadPodcasts === true ? (
         <Skeleton />
       ) : (
