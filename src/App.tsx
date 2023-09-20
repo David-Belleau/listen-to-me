@@ -13,6 +13,9 @@ const TrackId = React.lazy(
 const AlbumId = React.lazy(
   () => import(/* webpackPrefetch: true */ "./pages/AlbumId")
 );
+const PlaylistId = React.lazy(
+  () => import(/* webpackPrefetch: true */ "./pages/PlaylistId")
+);
 
 export const App = () => {
   const { toggleBg } = ToggleBg();
@@ -27,6 +30,7 @@ export const App = () => {
           <Route element={<PrivateRoutes />}>
             <Route path="/track/:trackId" element={<TrackId />} />
             <Route path="/album/:albumId" element={<AlbumId />} />
+            <Route path="/playlist/:playlistId" element={<PlaylistId />} />
           </Route>
         </Routes>
       </React.Suspense>

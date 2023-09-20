@@ -4,6 +4,7 @@ import { Separator } from "./Separator";
 import {
   useGetChartAlbumsQuery,
   useGetChartArtistsQuery,
+  useGetChartPlaylistsQuery,
   useGetChartTracksQuery,
 } from "../../services/deezerApiCalls";
 import { Skeleton } from "../loading/Skeleton";
@@ -17,7 +18,8 @@ export const Products = () => {
     useGetChartTracksQuery("chart tracks");
   const { data: albums, isLoading: loadAlbums } =
     useGetChartAlbumsQuery("chart albums");
-
+    const { data: playlists, isLoading: loadPlaylists } = useGetChartPlaylistsQuery("chart playlists");
+  
   return (
     <>
     {/*   <Separator children="Top artistes" />
@@ -112,6 +114,31 @@ export const Products = () => {
                         className="w-48 mx-auto rounded"
                       />
                     </Link>
+                  </SwiperSlide>
+                )
+              )}
+            </>
+          }
+        />
+      )}
+      <Separator children="Top playlists" />
+      {!playlists || loadPlaylists === true ? (
+        <Skeleton />
+      ) : (
+        <SliderTemplate
+          children={
+            <>
+              {playlists?.data.map(
+                (playlist: { id: number; picture_xl: string; title: string }) => (
+                  <SwiperSlide key={playlist.id}>
+                    <p className="text-center text-sm sm:text-xl w-34 truncate">
+                      {playlist.title}
+                    </p>
+                    <img
+                      src={playlist.picture_xl}
+                      alt={playlist.title}
+                      className="w-48 mx-auto rounded"
+                    />
                   </SwiperSlide>
                 )
               )}
