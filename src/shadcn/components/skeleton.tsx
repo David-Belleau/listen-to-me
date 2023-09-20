@@ -15,7 +15,7 @@ const Template = ({
 };
 
 // loading components
-export const Skeleton = () => {
+const Skeleton = () => {
   return (
     <div className="flex justify-center space-x-4 py-4 px-1">
       <Template className="w-[50px] h-[50px] rounded-full bg-black" />
@@ -28,7 +28,7 @@ export const Skeleton = () => {
 };
 
 // loading app
-export const AppLoading = () => {
+const AppLoading = () => {
   return (
     <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
       <Template>
@@ -37,3 +37,5 @@ export const AppLoading = () => {
     </div>
   );
 };
+
+export { Skeleton, AppLoading };
