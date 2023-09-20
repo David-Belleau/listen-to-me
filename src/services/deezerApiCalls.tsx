@@ -27,6 +27,11 @@ export const getMusicData = createApi({
         url: "chart-playlists",
       }),
     }),
+    getChartPodcasts: builder.query({
+      query: () => ({
+        url: "chart-podcasts",
+      }),
+    }),
     getArtistsData: builder.query({
       query: () => ({
         url: "artists-data",
@@ -41,4 +46,5 @@ export const {
   useGetChartAlbumsQuery,
   useGetArtistsDataQuery,
   useGetChartPlaylistsQuery,
+  useGetChartPodcastsQuery
 } = getMusicData;
