@@ -3,7 +3,7 @@ import { Footer } from "../components/footer/Footer";
 import { Header } from "../components/header/Header";
 import { AlbumData } from "../components/products/AlbumData";
 
-export const AlbumId = () => {
+const AlbumId = () => {
   return (
     <>
       <Header />
@@ -13,3 +13,5 @@ export const AlbumId = () => {
     </>
   );
 };
+
+export default AlbumId;
