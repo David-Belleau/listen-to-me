@@ -5,15 +5,18 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ProvidersProps } from "./types";
 import { ErrorFallback } from "../components/error/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
+import { AppLoading } from "../shadcn/components/Skeleton";
 
 // all application providers
 export const Providers = ({ children }: ProvidersProps) => {
   return (
     <Provider store={store}>
       <Router>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          {children}
-        </ErrorBoundary>
+        <React.Suspense fallback={<AppLoading />}>
+          <ErrorBoundary FallbackComponent={ErrorFallback}>
+            {children}
+          </ErrorBoundary>
+        </React.Suspense>
       </Router>
     </Provider>
   );
