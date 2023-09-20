@@ -7,11 +7,6 @@ export const getMusicData = createApi({
     baseUrl: `${host}`,
   }),
   endpoints: (builder) => ({
-    getChartArtists: builder.query({
-      query: () => ({
-        url: "chart-artists",
-      }),
-    }),
     getChartTracks: builder.query({
       query: () => ({
         url: "chart-tracks",
@@ -32,19 +27,12 @@ export const getMusicData = createApi({
         url: "chart-podcasts",
       }),
     }),
-    getArtistsData: builder.query({
-      query: () => ({
-        url: "artists-data",
-      }),
-    }),
   }),
 });
 
 export const {
-  useGetChartArtistsQuery,
   useGetChartTracksQuery,
   useGetChartAlbumsQuery,
-  useGetArtistsDataQuery,
   useGetChartPlaylistsQuery,
-  useGetChartPodcastsQuery
+  useGetChartPodcastsQuery,
 } = getMusicData;
