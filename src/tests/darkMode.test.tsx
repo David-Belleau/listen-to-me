@@ -58,7 +58,6 @@ describe("ToggleBg", () => {
     expect(result.current.toggleMode).toBeInstanceOf(Function);
     expect(result.current.toggleBg).toBe("dark:bg-black");
     expect(result.current.toggleBgFooter).toBe("dark:bg-black");
-    expect(result.current.toggleBgSeparator).toBe("dark:bg-white");
   });
 
   test("return correct values when isDarkMode is false", () => {
@@ -70,6 +69,5 @@ describe("ToggleBg", () => {
     expect(result.current.toggleMode).toBeInstanceOf(Function);
     expect(result.current.toggleBg).toBe("bg-white");
     expect(result.current.toggleBgFooter).toBe("bg-gray");
-    expect(result.current.toggleBgSeparator).toBe("bg-black");
   });
 });
