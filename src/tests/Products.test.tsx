@@ -12,20 +12,18 @@ jest.mock("swiper/react", () => ({
   SwiperSlide: jest.fn(),
 }));
 
-describe("check elements presence", () => {
-  test("check titles presence", () => {
-    render(<Products />);
-    expect(
-      screen.getByRole("heading", { name: "Top titres" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "Top albums" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "Top playlists" })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole("heading", { name: "Top podcasts" })
-    ).toBeInTheDocument();
-  });
+test("check titles presence", () => {
+  render(<Products />);
+  expect(
+    screen.getByRole("heading", { name: "Top titres" })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: "Top albums" })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: "Top playlists" })
+  ).toBeInTheDocument();
+  expect(
+    screen.getByRole("heading", { name: "Top podcasts" })
+  ).toBeInTheDocument();
 });
