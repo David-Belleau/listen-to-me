@@ -1,4 +1,3 @@
-import { Contact } from "../components/contact/Contact";
 import { Footer } from "../components/footer/Footer";
 import { Header } from "../components/header/Header";
 import { AlbumData } from "../components/products/AlbumData";
@@ -8,7 +7,6 @@ const AlbumId = () => {
     <>
       <Header />
       <AlbumData />
-      <Contact />
       <Footer />
     </>
   );

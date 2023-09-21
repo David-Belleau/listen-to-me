@@ -1,6 +1,5 @@
 import { Header } from "../header/Header";
 import { Products } from "../products/Products";
-import { Contact } from "../contact/Contact";
 import { Footer } from "../footer/Footer";
 import {
   app_id,
@@ -36,7 +35,6 @@ export const Auth = () => {
       <>
         <Header />
         <Products />
-        <Contact />
         <Footer />
       </>
     );
