@@ -25,7 +25,7 @@ export const App = () => {
   const { toggleText } = ToggleText();
 
   return (
-    <div className={toggleBg + " " + toggleText}>
+    <div className={`flex flex-col min-h-screen ${toggleBg} + " " + ${toggleText}` }>
       <React.Suspense fallback={<AppLoading />}>
         <Routes>
           <Route path="/" element={<Home />} />
