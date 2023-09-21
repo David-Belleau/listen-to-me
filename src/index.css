@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
+.swiper-button-next {
+  height: 2.5rem !important;
+}
 
-@layer base {
+.swiper__bullet--active {
+  background-color: #ffa900 !important;
+  opacity: 1 !important;
+}
+
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
