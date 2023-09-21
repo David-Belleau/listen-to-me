@@ -1,21 +1,28 @@
 import { Swiper } from "swiper/react";
 import { SliderProps } from "../../utils/types";
-import "swiper/css/pagination";
 import "swiper/css";
-import { Navigation, Pagination } from "swiper";
+import "swiper/css/pagination";
+import { EffectCoverflow, Navigation, Pagination } from "swiper";
 
-const SliderTemplate = ({
-  children,
-}: SliderProps) => {
+const SliderTemplate = ({ children }: SliderProps) => {
   return (
-    <div className="my-4 mx-6 md:mx-10">
+    <div>
       <Swiper
         slidesPerView={3}
-        pagination={{ clickable: true }}
-        modules={[Pagination, Navigation]}
         navigation={true}
+        pagination={{ clickable: true,
+        bulletActiveClass :"swiper__bullet--active"}}
         loop={true}
-        spaceBetween={30}
+        effect={"coverflow"}
+        coverflowEffect={{
+          rotate: 40,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+          scale: 0.8
+        }}
+        modules={[EffectCoverflow, Navigation,Pagination]}
       >
         {children}
       </Swiper>
