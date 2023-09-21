@@ -17,6 +17,7 @@ export const useDarkMode = () => {
       document.documentElement.classList.add("dark");
       localStorage.setItem("darkMode", "true");
     }
+    // toggle true/false value
     dispatch(toggleDarkMode());
   };
   return {
@@ -43,10 +44,10 @@ export const ToggleBg = () => {
 };
 
 export const ToggleText = () => {
-  const { isDarkMode, toggleMode } = useDarkMode();
+  const { isDarkMode} = useDarkMode();
   const toggleText =
     isDarkMode && isDarkMode === true ? "dark:text-white" : "text-black";
-  return { isDarkMode, toggleMode, toggleText };
+  return { toggleText };
 };
 
 export const ToggleLogo = () => {
@@ -76,3 +77,9 @@ export const ToggleLogo = () => {
     </>
   );
 };
+
+export const ToggleWidget = () => {
+  const { isDarkMode } = useDarkMode();
+  const toggleWidget = isDarkMode && isDarkMode === true ? "dark" : "light";
+  return { isDarkMode, toggleWidget };
+}
