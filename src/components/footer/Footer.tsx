@@ -2,11 +2,12 @@ import { ToggleBg, ToggleButton } from "../../utils/darkMode";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const { toggleBgFooter } = ToggleBg();
+  const { toggleBgFooter, toggleBgSeparator } = ToggleBg();
   const { toggleButton } = ToggleButton();
 
   return (
     <footer className={`mt-8 ${toggleBgFooter}`}>
+      <div className={`${toggleBgSeparator} h-px w-3/4 mx-auto`}></div>
       <div className="flex flex-col justiy-center items-center gap-8 py-5 ">
         <a href="mailto:david-belleau@hotmail.com">
           <button
