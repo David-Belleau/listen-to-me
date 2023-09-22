@@ -1,4 +1,3 @@
-import { LuHeadphones } from "react-icons/lu";
 import { useAppDispatch, useAppSelector } from "../redux/app/hooks";
 import { toggleDarkMode } from "../redux/features/darkModeSlice";
 import { RootState } from "./types";
@@ -32,11 +31,13 @@ export const ToggleBg = () => {
     isDarkMode && isDarkMode === true ? "dark:bg-black" : "bg-white";
   const toggleBgFooter =
     isDarkMode && isDarkMode === true ? "dark:bg-black" : "bg-gray";
+  const toggleBgSeparator = isDarkMode && isDarkMode === true ? "dark:bg-orange" : "";
   return {
     isDarkMode,
     toggleMode,
     toggleBg,
     toggleBgFooter,
+    toggleBgSeparator,
   };
 };
 
