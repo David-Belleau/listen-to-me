@@ -12,7 +12,7 @@ export type SeparatorTemplateProps = {
   children: string;
 };
 export type ProductsTemplateProps = {
-  title: string;
+  heading: string;
   products: {};
   loading: boolean;
   template: JSX.Element;
