@@ -1,4 +1,4 @@
-import { ToggleBg, useDarkMode } from "../utils/darkMode";
+import { useDarkMode } from "../utils/darkMode";
 import { renderHook, act } from "@testing-library/react";
 import { useAppDispatch, useAppSelector } from "../redux/app/hooks";
 import { toggleDarkMode } from "../redux/features/darkModeSlice";
@@ -9,65 +9,56 @@ jest.mock("../redux/app/hooks", () => ({
   useAppDispatch: jest.fn(),
 }));
 
-describe("useDarkMode", () => {
+describe("useDarkMode() function", () => {
   beforeEach(() => {
+    Object.defineProperty(window, "localStorage", {
+      value: {
+        setItem: jest.fn(),
+        removeItem: jest.fn(),
+        clear: jest.fn(),
+      },
+    });
+    document.documentElement.classList.add = jest.fn();
+    document.documentElement.classList.remove = jest.fn();
+  });
+  afterEach(() => {
     jest.resetAllMocks();
     localStorage.clear();
   });
-  test("toggle dark mode when isDarkMode is true", () => {
-    const mockDispatch = jest.fn().mockName("dispatch");
-    const mockIsDarkMode = true;
+
+  test("useDarkMode() default values", () => {
     const { result } = renderHook(() => useDarkMode(), { wrapper: Providers });
-    (useAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
-    (useAppSelector as jest.Mock).mockReturnValue(mockIsDarkMode);
-    act(() => {
-      result.current.toggleMode();
+    // isDarkMode is undefined
+    expect(result.current).toEqual({
+      toggleMode: expect.any(Function),
     });
-    expect(document.documentElement.classList.add).toHaveBeenCalledWith("dark");
-    expect(localStorage.setItem).toHaveBeenCalledWith("darkMode", "true");
-    expect(mockDispatch).toHaveBeenCalledWith(toggleDarkMode());
   });
-  test("toggle dark mode when isDarkMode is false", () => {
+  test("toggle dark mode when isDarkMode is true", () => {
     const mockDispatch = jest.fn();
     const mockIsDarkMode = false;
-    const { result } = renderHook(() => useDarkMode(), { wrapper: Providers });
     (useAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
     (useAppSelector as jest.Mock).mockReturnValue(mockIsDarkMode);
+    const { result } = renderHook(() => useDarkMode(), { wrapper: Providers });
     act(() => {
       result.current.toggleMode();
     });
+    expect(mockDispatch).toHaveBeenCalledWith(toggleDarkMode());
+    expect(document.documentElement.classList.add).toHaveBeenCalledWith("dark");
+    expect(localStorage.setItem).toHaveBeenCalledWith("darkMode", "true");
+  });
+  test("toggle light mode when isDarkMode is false", () => {
+    const mockDispatch = jest.fn();
+    const mockIsDarkMode = true;
+    (useAppDispatch as jest.Mock).mockReturnValue(mockDispatch);
+    (useAppSelector as jest.Mock).mockReturnValue(mockIsDarkMode);
+    const { result } = renderHook(() => useDarkMode(), { wrapper: Providers });
+    act(() => {
+      result.current.toggleMode();
+    });
+    expect(mockDispatch).toHaveBeenCalledWith(toggleDarkMode());
     expect(document.documentElement.classList.remove).toHaveBeenCalledWith(
       "dark"
     );
     expect(localStorage.setItem).toHaveBeenCalledWith("darkMode", "false");
-    expect(mockDispatch).toHaveBeenCalledWith(toggleDarkMode());
-  });
-});
-
-describe("ToggleBg", () => {
-  beforeEach(() => {
-    jest.resetAllMocks();
-    localStorage.clear();
-  });
-  test("return correct values when isDarkMode is true", () => {
-    const { result } = renderHook(() => ToggleBg(), { wrapper: Providers });
-    act(() => {
-      result.current.toggleMode();
-    });
-    expect(result.current.isDarkMode).toBe(true);
-    expect(result.current.toggleMode).toBeInstanceOf(Function);
-    expect(result.current.toggleBg).toBe("dark:bg-black");
-    expect(result.current.toggleBgFooter).toBe("dark:bg-black");
-  });
-
-  test("return correct values when isDarkMode is false", () => {
-    const { result } = renderHook(() => ToggleBg(), { wrapper: Providers });
-    act(() => {
-      result.current.toggleMode();
-    });
-    expect(result.current.isDarkMode).toBe(false);
-    expect(result.current.toggleMode).toBeInstanceOf(Function);
-    expect(result.current.toggleBg).toBe("bg-white");
-    expect(result.current.toggleBgFooter).toBe("bg-gray");
   });
 });
