@@ -17,9 +17,9 @@ const Template = ({
 // loading components
 export const Skeleton = () => {
   return (
-    <div className="flex justify-center space-x-4 py-4 px-1">
+    <div aria-label='round' className="flex justify-center space-x-4 py-4 px-1">
       <Template className="w-[50px] h-[50px] rounded-full bg-black" />
-      <div className="space-y-4">
+      <div aria-label="bar" className="space-y-4">
         <Template className="h-4 w-[250px] bg-black" />
         <Template className="h-4 w-[200px] bg-black" />
       </div>
