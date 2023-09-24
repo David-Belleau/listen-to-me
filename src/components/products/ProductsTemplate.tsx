@@ -4,14 +4,14 @@ import { SeparatorTemplate } from "./SeparatorTemplate";
 import SliderTemplate from "./SliderTemplate";
 
 export const ProductsTemplate = ({
-  title,
+  heading,
   products,
   loading,
   template,
 }: ProductsTemplateProps) => {
   return (
     <>
-      <SeparatorTemplate children={title} />
+      <SeparatorTemplate children={heading} />
       {!products || loading === true ? (
         <Skeleton />
       ) : (
