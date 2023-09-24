@@ -21,7 +21,7 @@ export const Products = () => {
   return (
     <>
       <ProductsTemplate
-        title="Top titres"
+        heading="Top titres"
         products={tracks}
         loading={loadTracks}
         template={
@@ -56,7 +56,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
-        title="Top albums"
+        heading="Top albums"
         products={albums}
         loading={loadAlbums}
         template={
@@ -89,7 +89,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
-        title="Top playlists"
+        heading="Top playlists"
         products={playlists}
         loading={loadPlaylists}
         template={
@@ -114,7 +114,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
-        title="Top podcasts"
+        heading="Top podcasts"
         products={podcasts}
         loading={loadPodcasts}
         template={
