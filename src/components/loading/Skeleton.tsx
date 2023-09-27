@@ -30,7 +30,7 @@ export const Skeleton = () => {
 // loading app
 export const AppLoading = () => {
   return (
-    <div className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
+    <div role="alert" className="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4">
       <Template>
         <SiYoutubemusic className="text-orange" size={90} />
       </Template>
