@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { ProvidersProps } from "./types";
 import { ErrorFallback } from "../components/error/ErrorFallback";
 import { ErrorBoundary } from "react-error-boundary";
+import React from "react";
 
 // all application providers
 export const Providers = ({ children }: ProvidersProps) => {
