@@ -1,5 +1,5 @@
 import { useDarkMode } from "../utils/darkMode";
-import { renderHook, act } from "@testing-library/react";
+import { renderHook, act } from "../utils/test-utils";
 import { useAppDispatch, useAppSelector } from "../redux/app/hooks";
 import { toggleDarkMode } from "../redux/features/darkModeSlice";
 import { Providers } from "../utils/Providers";
