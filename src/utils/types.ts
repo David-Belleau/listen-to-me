@@ -5,13 +5,15 @@ export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
 // components
-export type SliderProps = {
+export type SwiperProps = {
+  ariaLabel:string,
   children: JSX.Element;
 };
 export type SeparatorTemplateProps = {
   children: string;
 };
 export type ProductsTemplateProps = {
+  ariaLabel: string;
   heading: string;
   products: {};
   loading: boolean;

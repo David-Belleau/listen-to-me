@@ -1,9 +1,10 @@
 import { ProductsTemplateProps } from "@/src/utils/types";
 import { Skeleton } from "../loading/Skeleton";
 import { SeparatorTemplate } from "./SeparatorTemplate";
-import SliderTemplate from "./SliderTemplate";
+import SwiperTemplate from "./SwiperTemplate";
 
 export const ProductsTemplate = ({
+  ariaLabel,
   heading,
   products,
   loading,
@@ -16,7 +17,7 @@ export const ProductsTemplate = ({
         <Skeleton />
       ) : (
         <>
-          <SliderTemplate children={template} />
+          <SwiperTemplate ariaLabel={`swiper-${ariaLabel}`} children={template} />
         </>
       )}
     </>
