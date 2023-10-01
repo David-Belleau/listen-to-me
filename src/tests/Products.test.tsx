@@ -1,7 +1,7 @@
 import { render, screen } from "../utils/test-utils";
 import { Products } from "../components/products/Products";
 
-jest.mock("../components/products/SliderTemplate.tsx", () => {
+jest.mock("../components/products/SwiperTemplate.tsx", () => {
   return jest.fn();
 });
 jest.mock("swiper", () => ({

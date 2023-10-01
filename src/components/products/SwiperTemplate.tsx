@@ -1,13 +1,14 @@
 import { Swiper } from "swiper/react";
-import { SliderProps } from "../../utils/types";
+import { SwiperProps } from "../../utils/types";
 import "swiper/css";
 import "swiper/css/pagination";
 import { EffectCoverflow, Navigation, Pagination } from "swiper";
 
-const SliderTemplate = ({ children }: SliderProps) => {
+const SwiperTemplate = ({ ariaLabel, children }: SwiperProps) => {
   return (
-    <div>
+    <div >
       <Swiper
+        aria-label={ariaLabel}
         slidesPerView={3}
         navigation={true}
         pagination={{ clickable: true,
@@ -30,4 +31,4 @@ const SliderTemplate = ({ children }: SliderProps) => {
   );
 };
 
-export default SliderTemplate;
+export default SwiperTemplate;

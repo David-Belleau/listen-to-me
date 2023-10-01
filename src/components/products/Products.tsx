@@ -21,6 +21,7 @@ export const Products = () => {
   return (
     <>
       <ProductsTemplate
+        ariaLabel="tracks"
         heading="Top titres"
         products={tracks}
         loading={loadTracks}
@@ -56,6 +57,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
+        ariaLabel="albums"
         heading="Top albums"
         products={albums}
         loading={loadAlbums}
@@ -89,6 +91,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
+        ariaLabel="playlists"
         heading="Top playlists"
         products={playlists}
         loading={loadPlaylists}
@@ -114,6 +117,7 @@ export const Products = () => {
         }
       />
       <ProductsTemplate
+        ariaLabel="podcasts"
         heading="Top podcasts"
         products={podcasts}
         loading={loadPodcasts}

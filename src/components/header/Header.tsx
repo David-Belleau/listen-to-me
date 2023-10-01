@@ -32,14 +32,9 @@ export const Header = () => {
         </div>
         <button onClick={() => toggleMode()}>
           {isDarkMode && isDarkMode === true ? (
-            <MdLightMode
-              className="text-orange"
-              size={30}
-              title="light mode"
-              aria-label="light mode"
-            />
+            <MdLightMode className="text-orange" size={30}  aria-label="light mode"/>
           ) : (
-            <MdDarkMode className="text-orange" size={30} title="dark mode" />
+            <MdDarkMode className="text-orange" size={30} aria-label="dark mode" />
           )}
         </button>
       </div>
