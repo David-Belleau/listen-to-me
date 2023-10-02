@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Listen to me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project link
 
-## Available Scripts
+<a href='https://listen-to-me.netlify.app'>https://listen-to-me.netlify.app</a>
 
-In the project directory, you can run:
+## Description 
 
-### `npm start`
+Listen to me is a website for listening to music and podcasts.<br/>
+There's a mode for switching between light and dark moods. <br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Home page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src='./public/images/listen-to-me_laptop.png' alt='Home page'>
 
-### `npm test`
+# Stack 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- HTML
+- CSS
+- Tailwind
+- Javascript
+- Typescript
+- Axios
+- Jest 
+- Cypress
+- React testing library
+- Swiper js
+- React icons
+- React router dom
+- Error boundary
+- Redux toolkit
+- Dotenv
+- Netlify functions
+- Trello
 
-### `npm run build`
+# Getting started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have all of the following prerequisites :
+- Git - <a href='https://git-scm.com/downloads'>Download and install Git</a>
+- Node.js - <a href='https://nodejs.org/en/download'>Download and install Node.js</a>
+- Deezer <a href='https://www.deezer.com'>Sign in or register</a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Clone the project
 
-### `npm run eject`
+```
+git clone https://github.com/David-Belleau/listen-to-me.git 
+cd listen-to-me
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Install the dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Start the project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm start
+```
 
-## Learn More
+## Launch unit tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Launch end-to-end test
+
+```
+npm run cypress:open
+```
+
+# License
+
+Listen to me is MIT licensed.
