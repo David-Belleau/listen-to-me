@@ -29,7 +29,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "swiper": "^9.3.2",
+    "swiper": "^12.1.2",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.6",
     "ts-jest": "^29.0.3",
